@@ -1,0 +1,15 @@
+.header{
+    background-color: lightskyblue;
+    padding: 1rem;
+}
+
+.main{
+    background-color: darkcyan;
+    padding: 1rem;
+}
+
+.footer{
+    background-color: dimgray;
+    padding: 1rem;
+    margin-bottom: 0px;
+}
