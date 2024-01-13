@@ -37,3 +37,7 @@ li{
     flex-direction: row;
     list-style-type: none;
 }
+
+#intro-img{
+    width: 50%;
+}
