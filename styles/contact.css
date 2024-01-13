@@ -1,0 +1,28 @@
+.main{
+    display: block;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 40%;
+}
+
+.section-img{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.img{
+    width: 20%;
+    position: relative;
+    left: 725px;
+    bottom: 320px;
+}
+
+#button{
+    width: 15%;
+}
+
