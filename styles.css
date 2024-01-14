@@ -1,11 +1,11 @@
 .header{
-    background-color: lightskyblue;
+    background-color: darkslategray;
     padding: 1rem;
-    position: relative;
-    top: 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: relative;
+    margin-top: 0px;
 }
 
 .header ul{
@@ -19,12 +19,52 @@ li{
 }
 
 .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: darkcyan;
     padding: 1rem;
 }
 
+
+
+.card{
+    width: 300px;
+    padding: 1rem;
+    border-style: none;
+    background-color: darkcyan;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card h5{
+    text-align: center;
+    margin-top: 8px;
+}
+
+.card a{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+}
+
+.card a:hover{
+    color: chartreuse;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .footer{
-    background-color: dimgray;
+    background-color: darkgrey;
     padding: 1rem;
     position: relative;
     bottom: 0px;
