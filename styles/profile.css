@@ -1,0 +1,70 @@
+.main{
+    align-items: normal;
+}
+
+
+.top-section{
+    display: grid;
+    grid-template-areas: 
+    'profile-section user-stats';
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 2rem;
+}
+
+.profile-section{
+    display: flex;
+    flex-direction: row;
+}
+
+.name{
+    position: relative;
+    margin-top: 45px;
+    padding: 1rem;
+}
+
+.avatar{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.user-stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat{
+    padding: 1rem;
+    border-right: grey solid 1px;
+    font-size: 20px;
+}
+
+.user-stats p{
+    text-align: center;
+}
+
+.records-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards{
+    padding: 1rem;
+}
+
+.cards img{
+    width: 220px;
+    height: 250px;
+}
+
+.title{
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+}
+
+img{
+    width: 250px;
+}
