@@ -11,13 +11,14 @@
 .header ul{
     display: flex;
     flex-direction: row;
-    list-style-type: none;
 }
 
 li{
     padding: 1rem;
 }
-
+ul{
+    list-style-type: none;
+}
 .main{
     display: flex;
     flex-direction: column;
@@ -26,6 +27,14 @@ li{
     padding: 1rem;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: blue;
+}
 
 
 .card{
@@ -75,7 +84,6 @@ li{
 .footer ul{
     display: flex;
     flex-direction: row;
-    list-style-type: none;
 }
 
 #intro-img{

@@ -1,0 +1,51 @@
+.grid-container-santi{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.actions-logos{
+    width: 3rem;
+}
+
+.actions-logos :hover{
+    color: greenyellow;
+}
+
+.grid-item{
+    padding: 1rem;
+}
+
+.links-navbar{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.links-navbar a{
+    padding: 1rem;
+    font-size: 20px;
+}
+.links-navbar h5{
+    padding: 1rem;
+}
+
+
+.grid-item h3{
+    font-size: 40px;
+    font-family: 'Caprasimo', serif;
+}
+
+.grid-item p{
+    font-size: 28px;
+    border-bottom: gray solid 0.5px;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+}
+
+.rate-panel{
+    display: inline-block;
+}
