@@ -71,3 +71,19 @@
 img{
     width: 250px;
 }
+
+@media(min-width:425px) and (max-width:590px){
+    .top-section{
+        grid-template-columns: none;
+        grid-template-areas: none;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .stat{
+        font-size: 20px;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
