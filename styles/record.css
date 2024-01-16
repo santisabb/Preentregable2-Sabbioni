@@ -83,3 +83,13 @@
 img{
     width: 100%;
 }
+
+@media(max-width:480px){
+    .grid-container-santi{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    img{
+        width: 50%;
+    }
+}
