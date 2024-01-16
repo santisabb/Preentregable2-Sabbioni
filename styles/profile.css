@@ -63,6 +63,9 @@
 .title{
     font-family: 'Oswald', sans-serif;
     font-size: 32px;
+    border-bottom-width: 1px;
+    border-bottom-color: darkblue;
+    border-bottom-style: solid;
 }
 
 img{
