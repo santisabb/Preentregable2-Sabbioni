@@ -36,14 +36,44 @@
     font-family: 'Caprasimo', serif;
 }
 
-.grid-item p{
+.card{
     font-size: 28px;
-    border-bottom: gray solid 0.5px;
+    border-bottom: darkblue solid 1px;
+    border-radius: 0;
 }
 
 .sidebar{
     display: flex;
     flex-direction: column;
+}
+
+.sidebar-actions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-text{
+    font-size: 26px;
+}
+
+.actions1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.action{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.rate{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .rate-panel{
