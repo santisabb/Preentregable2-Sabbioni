@@ -1,3 +1,5 @@
+/*ESTILOS PARA INDEX.HTML*/
+
 .header{
     background-color: darkslategray;
     padding: 1rem;
@@ -91,20 +93,20 @@ a:hover{
 }
 
 @media(max-width:480px){
-    .header{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
     .header a{
         text-align: center;
         vertical-align: middle;
         margin-top: 50px;
     }
+
+    .header ul{
+        display: block;
+    }
     .navbar{
         display: grid;
         grid-template-areas: 
-        'profile records'
-        'wishlist lists';
+        'profile'
+        'records';
         margin-right: 20px;
         text-align: center;
     }
