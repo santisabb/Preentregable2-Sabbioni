@@ -1,13 +1,10 @@
-.main{
-    align-items: normal;
-}
 
 
 .top-section{
     display: grid;
     grid-template-areas: 
-    'profile-section user-stats';
-    grid-template-columns: repeat(2, 1fr);
+    'profile-section profile-menu user-stats';
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 2rem;
 }
 
@@ -26,6 +23,14 @@
     height: 150px;
     width: 150px;
     border-radius: 50%;
+}
+
+.navbar-profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 100px;
+    margin-top: 50px;
 }
 
 .user-stats{
