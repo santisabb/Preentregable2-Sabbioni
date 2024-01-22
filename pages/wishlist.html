@@ -8,7 +8,6 @@
     crossorigin="anonymous">
     <link rel="icon" href="../assets/images/logo-harmony1.jpeg" type="ico">
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/wishlist.css">
     <title>Wishlist</title>
 </head>
 <body>
@@ -25,17 +24,18 @@
     </header>
     </header>
     <main class="main">
-        <section class="navbar">
+        <section class="navbar-wishlist">
             <h4>Filter by</h4>
-            <div class="dropdown">
-                <button>Year</button>
-                <div class="dropdown-content">
-                    <a href="#">2010s</a>
-                    <a href="#">2000s</a>
-                    <a href="#">1990s</a>
-                    <a href="#">1980s</a>
+            <nav class="nav-wishlist">
+                <div class="dropdown">
+                    <button>Year</button>
+                    <div class="dropdown-content">
+                        <a href="#">2010s</a>
+                        <a href="#">2000s</a>
+                        <a href="#">1990s</a>
+                        <a href="#">1980s</a>
+                    </div>
                 </div>
-            </div>
             <div class="dropdown">
                 <button>Genre</button>
                 <div class="dropdown-content">
@@ -45,17 +45,20 @@
                     <a href="#">Pop</a>
                     <a href="#">Indie</a>
             </div>
+        </nav>
         </section>
 
         <section class="list-container">
             <h5 class="text">You want to hear this records</h5>
-            <section class="records-container">
-                <div class="record record1">
+            <section class="card-container">
+                <div class="card">
                     <img src="../assets/images/ad21s.png" alt="21s">
+                    <h5>american dream - 21 Savage</h5>
                     <a href="../record/american-dream.html">Record details</a>
                 </div>
-                <div class="record record2">
+                <div class="card">
                     <img src="../assets/images/la mosca y la sopa.jpg" alt="lmyls">
+                    <h5>La mosca y la sopa - Patricio Rey y sus redondotitos de ricota</h5>
                     <a href="../record/mosca-sopa.html">Record details</a>
                 </div>
             </section>
