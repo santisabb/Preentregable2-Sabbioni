@@ -223,7 +223,7 @@ h1{
 .user-stats p{
     text-align: center;
 }
-
+/*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE Y LISTS*/
 .records-cards{
     display: flex;
     flex-direction: column;
@@ -294,7 +294,7 @@ h1{
     flex-direction: row;
     justify-content: center;
 }
-
+/*ESTILOS DE DROPDOWN SE APLICAN EN RECORDS Y WISHLIST*/
 .dropdown {
     display: inline-block;
     position: relative;
