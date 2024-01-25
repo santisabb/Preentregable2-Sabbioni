@@ -1,42 +1,72 @@
-header, footer, footer .title, footer .navbar-list, header .navbar-list, header .title {
+header {
   display: flex;
-  flex-direction: row;
-  background-color: lightblue;
   justify-content: center;
-}
-header .title, footer .title {
   align-items: center;
+  flex-direction: row;
+  background-color: darkslategray;
+}
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+header .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   padding: 1rem;
 }
-header .title .title-img, footer .title .title-img {
+@media screen and (max-width: 480px) {
+  header .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+}
+header .title .title-img {
   width: 15%;
 }
-header .title .title-text, footer .title .title-text {
+header .title .title-text {
   padding-right: 1rem;
   text-decoration: none;
   color: indianred;
 }
-header .title .title-text:hover, footer .title .title-text:hover {
-  color: forestgreen;
+header .title .title-text:hover {
+  color: aquamarine;
 }
-header .title .title-text h1, footer .title .title-text h1 {
+header .title .title-text h1 {
   font-size: 48px;
 }
-header .nav, footer .nav {
+header .nav {
   position: relative;
   right: 125px;
 }
-header .navbar-list, footer .navbar-list {
+@media screen and (max-width: 768px) {
+  header .nav {
+    position: unset;
+  }
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   list-style-type: none;
   font-size: 20px;
 }
-header .navbar-list li, footer .navbar-list li {
+.navbar-list li {
   padding: 1rem;
 }
-header .navbar-list li a, footer .navbar-list li a {
+.navbar-list li a {
   text-decoration: none;
 }
-header .navbar-list li a:hover, footer .navbar-list li a:hover {
+.navbar-list li a:hover {
   color: black;
 }
 
@@ -78,6 +108,19 @@ main .welcome-text {
 }
 .card-container .card a:hover {
   color: black;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: darkgrey;
+}
+@media screen and (max-width: 480px) {
+  footer {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

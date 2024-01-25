@@ -4,15 +4,36 @@ $list-style: none;
 $main-font-text: 20px;
 $main-font-titles: 48px;
 
+@mixin flex($direction, $justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin tablet{
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media screen and (max-width:480px) {
+        @content;
+    }
+}
 
 header{
-    display: flex;
-    flex-direction: row;
-    background-color: lightblue;
-    justify-content: center;
+    @include flex(row, center, center );
+    @include tablet(){
+        @include flex(column, center , center);
+    }
+    background-color: darkslategray;
     .title{
-        @extend header;
-        align-items: center;
+        @include flex(row, center , center);
+        @include mobile(){
+            @include flex(column-reverse, center, center);
+        }
         padding: 1rem;
         .title-img{
             width: 15%;
@@ -22,7 +43,7 @@ header{
             text-decoration: $link-style;
             color: indianred;
             &:hover{
-                color: forestgreen;
+                color: aquamarine;
             }
             h1{
                 font-size: $main-font-titles;
@@ -31,24 +52,27 @@ header{
     }
     .nav{
         position: relative;
-        right: 125px
-
+        right: 125px;
+        @include tablet(){
+            position: unset;
+        }
     }
-    .navbar-list{
-        @extend header;
-        list-style-type: $list-style;
-        font-size: $main-font-text;
-        li {
-            padding: 1rem;
-            a {
-                text-decoration: $link-style;
-                &:hover{
-                    color: black;
-                }
+}
+.navbar-list{
+    @include flex(row, center, center);
+    list-style-type: $list-style;
+    font-size: $main-font-text;
+    li {
+        padding: 1rem;
+        a {
+            text-decoration: $link-style;
+            &:hover{
+                color: black;
             }
         }
     }
 }
+
 main{
     background-color: dimgray;
     .welcome-section{
@@ -92,5 +116,9 @@ main{
     }
 }
 footer{
-    @extend header;
+    @include flex(row, center , center);
+    background-color: darkgrey;
+    @include mobile(){
+        display: none;
+    }
 }
