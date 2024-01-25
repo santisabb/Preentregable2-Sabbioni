@@ -1,8 +1,96 @@
-.section{
-    h1{
-        color: chartreuse;
+//VARIABLES
+$link-style: none;
+$list-style: none;
+$main-font-text: 20px;
+$main-font-titles: 48px;
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: lightblue;
+    justify-content: center;
+    .title{
+        @extend header;
+        align-items: center;
+        padding: 1rem;
+        .title-img{
+            width: 15%;
+        }
+        .title-text{
+            padding-right: 1rem;
+            text-decoration: $link-style;
+            color: indianred;
+            &:hover{
+                color: forestgreen;
+            }
+            h1{
+                font-size: $main-font-titles;
+            }
+        }
     }
-    p{
-        color: crimson;
+    .nav{
+        position: relative;
+        right: 125px
+
     }
+    .navbar-list{
+        @extend header;
+        list-style-type: $list-style;
+        font-size: $main-font-text;
+        li {
+            padding: 1rem;
+            a {
+                text-decoration: $link-style;
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+    }
+}
+main{
+    background-color: dimgray;
+    .welcome-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+        .welcome-title{
+            h2{
+                font-size: $main-font-titles;
+            }
+        }
+        .welcome-text{
+            font-size: $main-font-text;
+            @extend .welcome-section;
+        }
+    }
+
+.card-container{   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .card{
+        width: 300px;
+        background-color: dimgray;
+        flex-direction: column;
+        align-items: center;
+        border: none;
+        padding: 1rem;
+        .card-img{
+            width: 100%;
+        }
+        a{
+            color: darkmagenta;
+            font-size: $main-font-text;
+            text-decoration: $link-style;
+            &:hover{
+                color: black;
+            }
+        }
+    }
+}
+footer{
+    @extend header;
 }

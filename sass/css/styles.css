@@ -1,8 +1,83 @@
-.section h1 {
-  color: chartreuse;
+header, footer, footer .title, footer .navbar-list, header .navbar-list, header .title {
+  display: flex;
+  flex-direction: row;
+  background-color: lightblue;
+  justify-content: center;
 }
-.section p {
-  color: crimson;
+header .title, footer .title {
+  align-items: center;
+  padding: 1rem;
+}
+header .title .title-img, footer .title .title-img {
+  width: 15%;
+}
+header .title .title-text, footer .title .title-text {
+  padding-right: 1rem;
+  text-decoration: none;
+  color: indianred;
+}
+header .title .title-text:hover, footer .title .title-text:hover {
+  color: forestgreen;
+}
+header .title .title-text h1, footer .title .title-text h1 {
+  font-size: 48px;
+}
+header .nav, footer .nav {
+  position: relative;
+  right: 125px;
+}
+header .navbar-list, footer .navbar-list {
+  list-style-type: none;
+  font-size: 20px;
+}
+header .navbar-list li, footer .navbar-list li {
+  padding: 1rem;
+}
+header .navbar-list li a, footer .navbar-list li a {
+  text-decoration: none;
+}
+header .navbar-list li a:hover, footer .navbar-list li a:hover {
+  color: black;
+}
+
+main {
+  background-color: dimgray;
+}
+main .welcome-section, main .welcome-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .welcome-title h2 {
+  font-size: 48px;
+}
+main .welcome-text {
+  font-size: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.card-container .card {
+  width: 300px;
+  background-color: dimgray;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  padding: 1rem;
+}
+.card-container .card .card-img {
+  width: 100%;
+}
+.card-container .card a {
+  color: darkmagenta;
+  font-size: 20px;
+  text-decoration: none;
+}
+.card-container .card a:hover {
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */
