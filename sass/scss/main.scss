@@ -1,8 +1,14 @@
 //VARIABLES
 $link-style: none;
 $list-style: none;
-$main-font-text: 20px;
+$main-font-text: 18px;
+$mobile-font-text: 13px;
 $main-font-titles: 48px;
+$mobile-font-titles: 30px;
+$secondary-font-titles: 23px;
+$mobile-secondary-font-titles: 20px;
+$card-font-text: 18px;
+$mobile-card-font-text: 15px;
 
 @mixin flex($direction, $justify, $align){
     display: flex;
@@ -12,18 +18,19 @@ $main-font-titles: 48px;
 }
 
 @mixin tablet{
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:900px) {
         @content;
     }
 }
 
 @mixin mobile{
-    @media screen and (max-width:480px) {
+    @media screen and (max-width:520px) {
         @content;
     }
 }
 
 header{
+    //esta parte se aplicara a TODA las paginas en general
     @include flex(row, center, center );
     @include tablet(){
         @include flex(column, center , center);
@@ -40,6 +47,9 @@ header{
         }
         .title-text{
             padding-right: 1rem;
+            @include mobile(){
+                padding-right: unset;
+            }
             text-decoration: $link-style;
             color: indianred;
             &:hover{
@@ -47,6 +57,11 @@ header{
             }
             h1{
                 font-size: $main-font-titles;
+            }
+            @include mobile(){
+                h1{
+                    font-size: $mobile-font-titles;
+                }
             }
         }
     }
@@ -57,11 +72,19 @@ header{
             position: unset;
         }
     }
+    .navbar{
+        @include mobile(){
+            right: 15px;
+        }
+    }
 }
 .navbar-list{
     @include flex(row, center, center);
     list-style-type: $list-style;
     font-size: $main-font-text;
+    @include mobile(){
+        font-size: $mobile-font-text;
+    }
     li {
         padding: 1rem;
         a {
@@ -74,51 +97,58 @@ header{
 }
 
 main{
+    //esta parte se aplicara a TODA las paginas en general
     background-color: dimgray;
-    .welcome-section{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        }
-        .welcome-title{
-            h2{
-                font-size: $main-font-titles;
-            }
-        }
-        .welcome-text{
-            font-size: $main-font-text;
-            @extend .welcome-section;
-        }
-    }
+}
 
-.card-container{   
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+footer{
+    //esta parte se aplicara a TODA las paginas en general
+    @include flex(row, center , center);
+    background-color: darkgrey;
+    @include mobile(){
+        display: none;
+    }
+}
+//lo siguiente solo se aplica en index.html
+.welcome-section{
+    @include flex(column, center, center);
+}
+.welcome-title{
+    h2{
+        font-size: $secondary-font-titles;
+    }
+}
+.welcome-text{
+    font-size: $main-font-text;
+    @extend .welcome-section;
+    @include mobile(){
+        font-size: $mobile-font-text;
+    }
+}
+.card-container{ 
+    @include flex(row, center, unset);
     .card{
         width: 300px;
         background-color: dimgray;
-        flex-direction: column;
-        align-items: center;
+        @include flex(column, unset, center);
         border: none;
         padding: 1rem;
         .card-img{
             width: 100%;
         }
+        h4{
+            font-size: $card-font-text;
+        }
         a{
             color: darkmagenta;
             font-size: $main-font-text;
+            @include mobile(){
+                font-size: $mobile-font-text;
+            }
             text-decoration: $link-style;
             &:hover{
                 color: black;
             }
         }
-    }
-}
-footer{
-    @include flex(row, center , center);
-    background-color: darkgrey;
-    @include mobile(){
-        display: none;
     }
 }

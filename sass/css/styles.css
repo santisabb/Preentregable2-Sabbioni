@@ -5,7 +5,7 @@ header {
   flex-direction: row;
   background-color: darkslategray;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   header {
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@ header .title {
   flex-direction: row;
   padding: 1rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
   header .title {
     display: flex;
     justify-content: center;
@@ -36,19 +36,34 @@ header .title .title-text {
   text-decoration: none;
   color: indianred;
 }
+@media screen and (max-width: 520px) {
+  header .title .title-text {
+    padding-right: unset;
+  }
+}
 header .title .title-text:hover {
   color: aquamarine;
 }
 header .title .title-text h1 {
   font-size: 48px;
 }
+@media screen and (max-width: 520px) {
+  header .title .title-text h1 {
+    font-size: 30px;
+  }
+}
 header .nav {
   position: relative;
   right: 125px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   header .nav {
     position: unset;
+  }
+}
+@media screen and (max-width: 520px) {
+  header .navbar {
+    right: 15px;
   }
 }
 
@@ -58,7 +73,12 @@ header .nav {
   align-items: center;
   flex-direction: row;
   list-style-type: none;
-  font-size: 20px;
+  font-size: 18px;
+}
+@media screen and (max-width: 520px) {
+  .navbar-list {
+    font-size: 13px;
+  }
 }
 .navbar-list li {
   padding: 1rem;
@@ -73,42 +93,6 @@ header .nav {
 main {
   background-color: dimgray;
 }
-main .welcome-section, main .welcome-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main .welcome-title h2 {
-  font-size: 48px;
-}
-main .welcome-text {
-  font-size: 20px;
-}
-
-.card-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.card-container .card {
-  width: 300px;
-  background-color: dimgray;
-  flex-direction: column;
-  align-items: center;
-  border: none;
-  padding: 1rem;
-}
-.card-container .card .card-img {
-  width: 100%;
-}
-.card-container .card a {
-  color: darkmagenta;
-  font-size: 20px;
-  text-decoration: none;
-}
-.card-container .card a:hover {
-  color: black;
-}
 
 footer {
   display: flex;
@@ -117,10 +101,66 @@ footer {
   flex-direction: row;
   background-color: darkgrey;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
   footer {
     display: none;
   }
+}
+
+.welcome-section, .welcome-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome-title h2 {
+  font-size: 23px;
+}
+
+.welcome-text {
+  font-size: 18px;
+}
+@media screen and (max-width: 520px) {
+  .welcome-text {
+    font-size: 13px;
+  }
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: unset;
+  flex-direction: row;
+}
+.card-container .card {
+  width: 300px;
+  background-color: dimgray;
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+  padding: 1rem;
+}
+.card-container .card .card-img {
+  width: 100%;
+}
+.card-container .card h4 {
+  font-size: 18px;
+}
+.card-container .card a {
+  color: darkmagenta;
+  font-size: 18px;
+  text-decoration: none;
+}
+@media screen and (max-width: 520px) {
+  .card-container .card a {
+    font-size: 13px;
+  }
+}
+.card-container .card a:hover {
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */
