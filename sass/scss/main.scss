@@ -9,6 +9,7 @@ $secondary-font-titles: 23px;
 $mobile-secondary-font-titles: 20px;
 $card-font-text: 18px;
 $mobile-card-font-text: 15px;
+$text-color: rgb(229, 228, 228);
 
 @mixin flex($direction, $justify, $align){
     display: flex;
@@ -35,7 +36,7 @@ header{
     @include tablet(){
         @include flex(column, center , center);
     }
-    background-color: darkslategray;
+    background-color: #191919;
     .title{
         @include flex(row, center , center);
         @include mobile(){
@@ -90,7 +91,7 @@ header{
         a {
             text-decoration: $link-style;
             &:hover{
-                color: black;
+                color: rgb(209, 202, 202);
             }
         }
     }
@@ -98,13 +99,13 @@ header{
 
 main{
     //esta parte se aplicara a TODA las paginas en general
-    background-color: dimgray;
+    background-color: rgb(65, 65, 65);
 }
 
 footer{
     //esta parte se aplicara a TODA las paginas en general
     @include flex(row, center , center);
-    background-color: darkgrey;
+    background-color: rgb(133, 133, 133);
     @include mobile(){
         display: none;
     }
@@ -116,10 +117,12 @@ footer{
 .welcome-title{
     h2{
         font-size: $secondary-font-titles;
+        color: $text-color;
     }
 }
 .welcome-text{
     font-size: $main-font-text;
+    color: $text-color;
     @extend .welcome-section;
     @include mobile(){
         font-size: $mobile-font-text;
@@ -129,7 +132,8 @@ footer{
     @include flex(row, center, unset);
     .card{
         width: 300px;
-        background-color: dimgray;
+        //background-color: dimgray;
+        @extend main;
         @include flex(column, unset, center);
         border: none;
         padding: 1rem;
@@ -138,9 +142,10 @@ footer{
         }
         h4{
             font-size: $card-font-text;
+            color: $text-color;
         }
         a{
-            color: darkmagenta;
+            color: deeppink;
             font-size: $main-font-text;
             @include mobile(){
                 font-size: $mobile-font-text;
@@ -151,4 +156,79 @@ footer{
             }
         }
     }
+}
+
+/*ESTILOS PARA CONTACT.HTML*/
+.section-form{
+    @include flex(row, space-around, unset);
+    @include mobile(){
+        @include flex(column, center, center);
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+#button{
+    width: 30%;
+    margin: 10px;
+}
+
+/*ESTILOS PARA RECORDS.HTML*/
+
+.filters{
+    @include flex(row, center, center);
+    margin-bottom: 200px;
+    @include tablet(){
+        @include flex(column, center, center);
+    }
+}
+.nav-records{
+    @include flex(row, center, center);
+    ul{
+        margin-bottom: unset;
+    }
+    @include mobile(){
+        @include flex(column-reverse, center, center)
+    }
+}
+/*ESTILOS DE DROPDOWN SE APLICAN EN RECORDS Y WISHLIST*/
+.dropdown {
+    display: inline-block;
+    position: relative;
+    padding: 1rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+}
+.dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+}
+
+.records{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading{
+    border-bottom: solid darkblue 1px;
 }

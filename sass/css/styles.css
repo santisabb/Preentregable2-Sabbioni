@@ -3,7 +3,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: darkslategray;
+  background-color: #191919;
 }
 @media screen and (max-width: 900px) {
   header {
@@ -87,11 +87,11 @@ header .nav {
   text-decoration: none;
 }
 .navbar-list li a:hover {
-  color: black;
+  color: rgb(209, 202, 202);
 }
 
-main {
-  background-color: dimgray;
+main, .card-container .card {
+  background-color: rgb(65, 65, 65);
 }
 
 footer {
@@ -99,7 +99,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: darkgrey;
+  background-color: rgb(133, 133, 133);
 }
 @media screen and (max-width: 520px) {
   footer {
@@ -116,10 +116,12 @@ footer {
 
 .welcome-title h2 {
   font-size: 23px;
+  color: rgb(229, 228, 228);
 }
 
 .welcome-text {
   font-size: 18px;
+  color: rgb(229, 228, 228);
 }
 @media screen and (max-width: 520px) {
   .welcome-text {
@@ -135,7 +137,6 @@ footer {
 }
 .card-container .card {
   width: 300px;
-  background-color: dimgray;
   display: flex;
   justify-content: unset;
   align-items: center;
@@ -148,9 +149,10 @@ footer {
 }
 .card-container .card h4 {
   font-size: 18px;
+  color: rgb(229, 228, 228);
 }
 .card-container .card a {
-  color: darkmagenta;
+  color: deeppink;
   font-size: 18px;
   text-decoration: none;
 }
@@ -161,6 +163,109 @@ footer {
 }
 .card-container .card a:hover {
   color: black;
+}
+
+/*ESTILOS PARA CONTACT.HTML*/
+.section-form {
+  display: flex;
+  justify-content: space-around;
+  align-items: unset;
+  flex-direction: row;
+}
+@media screen and (max-width: 520px) {
+  .section-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+#button {
+  width: 30%;
+  margin: 10px;
+}
+
+/*ESTILOS PARA RECORDS.HTML*/
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 200px;
+}
+@media screen and (max-width: 900px) {
+  .filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.nav-records {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.nav-records ul {
+  margin-bottom: unset;
+}
+@media screen and (max-width: 520px) {
+  .nav-records {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+}
+
+/*ESTILOS DE DROPDOWN SE APLICAN EN RECORDS Y WISHLIST*/
+.dropdown {
+  display: inline-block;
+  position: relative;
+  padding: 1rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #00A4BD;
+}
+
+.records {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  border-bottom: solid darkblue 1px;
 }
 
 /*# sourceMappingURL=styles.css.map */

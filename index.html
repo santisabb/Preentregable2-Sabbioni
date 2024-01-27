@@ -3,59 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
-    crossorigin="anonymous">
-    <link rel="icon" href="assets/images/logo-harmony1.jpeg" type="ico">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Home</title>
+    <title>Harmony</title>
+    <link rel="stylesheet" href="/sass/css/styles.css">
+    <link rel="icon" href="../assets/images/logo-harmony1.jpeg" type="ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <header class="header">
-        <a href="index.html">
-            <h1>HARMONY</h1>
-        </a>
-        <nav>
-            <ul class="navbar">
-                <li class="profile"><a href="pages/profile.html">Profile</a></li>
-                <li class="records"><a href="pages/records.html">Records</a></li>
+    <header>
+        <div class="title">
+            <a href="index.html" class="title-text"><h1>HARMONY</h1></a>
+            <img src="../assets/images/logo-harmony1.jpeg" alt="harmony" class="title-img">
+        </div>
+        <div class="nav">
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="list-item">
+                        <a href="../pages/profile.html">Profile</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="../pages/records.html">Records</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article class="welcome-section">
+            <div class="welcome-title">
+                <h2>Welcome to Harmony</h2>
+            </div>
+            <div class="welcome-text">
+                <p>We have some albums and singles so you can give them a review and a rating</p>
+                <p>Please checkout the footer if you have any questions or want to contact us</p>
+            </div>
+        </article>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assets/images/tu duo favorito.jpg" alt="542" class="card-img">
+                <h4>TU DUO FAVORITO - YSY A & Bhavi</h4>
+                <a href="../record/tu-duo-favorito.html">Record details</a>
+            </div>
+            <div class="card">
+                <img src="../assets/images/cuervos.jpg" alt="cuervos" class="card-img">
+                <h4>Cuervos - C.R.O</h4>
+                <a href="../record/cuervos.html">Record details</a>
+            </div>
+            <div class="card">
+                <img src="../assets/images/la mosca y la sopa.jpg" alt="lmyls" class="card-img">
+                <h4>La mosca y la sopa - Patricio Rey y sus redonditos de ricota</h4>
+                <a href="../record/mosca-sopa.html">Record details</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="list-item">
+                    <a href="../pages/about.html">About</a>
+                </li>
+                <li class="list-item">
+                    <a href="../pages/contact.html">Contact</a>
+                </li>
             </ul>
         </nav>
-    </header>
-    <main class="main">
-        <section class="title-main">
-            <h2>Welcome dear user!</h2>
-            <p>We have some albums and singles so you can give them a review and a rating</p>
-            <p>Please checkout the footer if you have any questions or want to contact us</p>
-        </section>
-        <section class="card-container">
-            <div class="card">
-                <img src="assets/images/clics modernos.jpeg" alt="">
-                <h5>Charly Garcia - Clics Modernos</h5>
-                <a href="record/clics-modernos.html">Record details</a>
-            </div>
-            <div class="card">
-                <img src="assets/images/cuervos.jpg" alt="">
-                <h5>C.R.O - Cuervos</h5>
-                <a href="record/cuervos.html">Record details</a>
-            </div>
-            <div class="card">
-                <img src="assets/images/x100pre.png" alt="">
-                <h5>Bad Bunny - X100PRE</h5>
-                <a href="record/x100pre.html">Record details</a>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-    <nav>
-        <ul>
-            <li><a href="pages/about.html">About</a></li>
-            <li><a href="pages/contact.html">Contact</a></li>
-        </ul>
-    </nav>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
