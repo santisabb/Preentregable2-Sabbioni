@@ -84,6 +84,7 @@ header .nav {
   padding: 1rem;
 }
 .navbar-list li a {
+  color: blue;
   text-decoration: none;
 }
 .navbar-list li a:hover {
@@ -260,8 +261,9 @@ footer {
 
 .records {
   display: flex;
-  flex-direction: column;
+  justify-content: unset;
   align-items: center;
+  flex-direction: column;
 }
 
 .heading {
@@ -316,8 +318,9 @@ footer {
 /*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE Y LISTS*/
 .records-cards {
   display: flex;
-  flex-direction: column;
+  justify-content: unset;
   align-items: center;
+  flex-direction: column;
 }
 
 .cards {
@@ -336,6 +339,22 @@ footer {
   border-bottom-color: darkblue;
   border-bottom-style: solid;
   color: rgb(229, 228, 228);
+}
+
+/*ESTILOS PARA WISHLIST*/
+.navbar-wishlist {
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.list-container {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=styles.css.map */

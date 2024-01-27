@@ -89,6 +89,7 @@ header{
     li {
         padding: 1rem;
         a {
+            color: blue;
             text-decoration: $link-style;
             &:hover{
                 color: rgb(229, 228, 228);
@@ -212,21 +213,25 @@ footer{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-.dropdown-content a {
-    display: block;
-    color: #000000;
-    padding: 5px;
-    text-decoration: none;
+.dropdown-content{
+    a{
+        display: block;
+        color: #000000;
+        padding: 5px;
+        text-decoration: none;
+    }
 }
-.dropdown-content a:hover {
-    color: #FFFFFF;
-    background-color: #00A4BD;
+.dropdown-content {
+    a{
+        &:hover{
+            color: #FFFFFF;
+            background-color: #00A4BD;
+        }
+    }
 }
 
 .records{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column, unset, center);
 }
 
 .heading{
@@ -271,24 +276,26 @@ footer{
     color: $text-color;
 }
 
-.user-stats p{
-    text-align: center;
+.user-stats {
+    p{
+        text-align: center;
+    }
 }
 
 /*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE Y LISTS*/
 .records-cards{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column, unset, center);
 }
 
 .cards{
     padding: 1rem;
 }
 
-.cards img{
-    width: 220px;
-    height: 250px;
+.cards{
+    img{
+        width: 220px;
+        height: 250px;
+    }
 }
 
 .list-title{
@@ -298,4 +305,13 @@ footer{
     border-bottom-color: darkblue;
     border-bottom-style: solid;
     color: $text-color;
+}
+/*ESTILOS PARA WISHLIST*/
+.navbar-wishlist{
+    margin-bottom: 200px;
+    @include flex(row, flex-start, center);
+}
+
+.list-container{
+    @include flex(column, unset, center);
 }
