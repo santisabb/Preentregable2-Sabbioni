@@ -91,7 +91,7 @@ header{
         a {
             text-decoration: $link-style;
             &:hover{
-                color: rgb(209, 202, 202);
+                color: rgb(229, 228, 228);
             }
         }
     }
@@ -231,4 +231,75 @@ footer{
 
 .heading{
     border-bottom: solid darkblue 1px;
+}
+
+/*ESTILOS PARA PROFILE.HTML*/
+
+
+.top-section{
+    display: grid;
+    grid-template-areas: 
+    'profile-section profile-menu user-stats';
+    margin-bottom: 2rem;
+}
+
+.profile-section{
+    @include flex(row, center, center);
+    padding-top: 0.5rem;
+}
+
+.name{
+    position: relative;
+    padding: 1rem;
+    color: $text-color;
+}
+
+.avatar{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.profile-menu{
+    @include flex(row, center, center);
+}
+
+.user-stats{
+    @include flex(row, center, center);
+}
+
+.stat{
+    padding: 1rem;
+    border-right: grey solid 1px;
+    font-size: 20px;
+    color: $text-color;
+}
+
+.user-stats p{
+    text-align: center;
+}
+
+/*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE Y LISTS*/
+.records-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards{
+    padding: 1rem;
+}
+
+.cards img{
+    width: 220px;
+    height: 250px;
+}
+
+.list-title{
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    border-bottom-width: 1px;
+    border-bottom-color: darkblue;
+    border-bottom-style: solid;
+    color: $text-color;
 }

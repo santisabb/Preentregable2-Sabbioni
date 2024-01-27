@@ -87,7 +87,7 @@ header .nav {
   text-decoration: none;
 }
 .navbar-list li a:hover {
-  color: rgb(209, 202, 202);
+  color: rgb(229, 228, 228);
 }
 
 main, .card-container .card {
@@ -266,6 +266,83 @@ footer {
 
 .heading {
   border-bottom: solid darkblue 1px;
+}
+
+/*ESTILOS PARA PROFILE.HTML*/
+.top-section {
+  display: grid;
+  grid-template-areas: "profile-section profile-menu user-stats";
+  margin-bottom: 2rem;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 0.5rem;
+}
+
+.name {
+  position: relative;
+  padding: 1rem;
+  color: rgb(229, 228, 228);
+}
+
+.avatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.profile-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.user-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.stat {
+  padding: 1rem;
+  border-right: grey solid 1px;
+  font-size: 20px;
+  color: rgb(229, 228, 228);
+}
+
+.user-stats p {
+  text-align: center;
+}
+
+/*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE Y LISTS*/
+.records-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  padding: 1rem;
+}
+
+.cards img {
+  width: 220px;
+  height: 250px;
+}
+
+.list-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  border-bottom-width: 1px;
+  border-bottom-color: darkblue;
+  border-bottom-style: solid;
+  color: rgb(229, 228, 228);
 }
 
 /*# sourceMappingURL=styles.css.map */
