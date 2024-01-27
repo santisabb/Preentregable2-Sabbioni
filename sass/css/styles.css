@@ -357,4 +357,89 @@ footer {
   flex-direction: column;
 }
 
+/*ESTILOS PARA ARCHIVOS DEL DIRECTORIO RECORD*/
+.grid-container-santi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.actions-logos {
+  width: 2rem;
+}
+
+.actions-logos :hover {
+  color: greenyellow;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.links-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.links-navba a {
+  padding: 1rem;
+  font-size: 20px;
+}
+
+.links-navbar h5 {
+  padding: 1rem;
+}
+
+.grid-item h3 {
+  font-size: 40px;
+  font-family: "Caprasimo", serif;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 26px;
+}
+
+.actions1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.rate {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.rate-panel {
+  display: inline-block;
+}
+
+.grid-item img {
+  width: 100%;
+}
+
 /*# sourceMappingURL=styles.css.map */
