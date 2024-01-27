@@ -271,7 +271,7 @@ footer {
 /*ESTILOS PARA PROFILE.HTML*/
 .top-section {
   display: grid;
-  grid-template-areas: "profile-section profile-menu user-stats";
+  grid-template-areas: "profile-section user-stats";
   margin-bottom: 2rem;
 }
 
@@ -293,13 +293,6 @@ footer {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-}
-
-.profile-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
 }
 
 .user-stats {
