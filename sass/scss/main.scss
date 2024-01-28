@@ -410,3 +410,37 @@ footer{
 
     }
 }
+//ESTILOS PARA ABOUT.HTML
+.resume{
+    padding: 1rem;
+    color: $text-color;
+    font-size: $main-font-text;
+    h4{
+        font-size: $main-font-titles;
+    }
+    h6{
+        font-size: $secondary-font-titles;
+    }
+    @include tablet(){
+        h4{
+            font-size: $mobile-font-titles;
+        }
+    }
+    @include mobile(){
+        font-size: $mobile-font-text;
+        h4{
+            font-size: $mobile-font-titles;
+        }
+        h6{
+            font-size: $mobile-secondary-font-titles;
+        }
+    }
+}
+
+.membership{
+    @extend .resume;
+}
+
+.use{
+    @extend .resume;
+}

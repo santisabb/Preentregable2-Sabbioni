@@ -442,4 +442,32 @@ footer {
   width: 100%;
 }
 
+.resume, .use, .membership {
+  padding: 1rem;
+  color: rgb(229, 228, 228);
+  font-size: 18px;
+}
+.resume h4, .use h4, .membership h4 {
+  font-size: 48px;
+}
+.resume h6, .use h6, .membership h6 {
+  font-size: 23px;
+}
+@media screen and (max-width: 900px) {
+  .resume h4, .use h4, .membership h4 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .resume, .use, .membership {
+    font-size: 13px;
+  }
+  .resume h4, .use h4, .membership h4 {
+    font-size: 30px;
+  }
+  .resume h6, .use h6, .membership h6 {
+    font-size: 20px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
