@@ -1,11 +1,11 @@
 //VARIABLES
 $link-style: none;
 $list-style: none;
-$main-font-text: 18px;
+$main-font-text: 16px;
 $mobile-font-text: 13px;
 $main-font-titles: 48px;
-$mobile-font-titles: 30px;
-$secondary-font-titles: 23px;
+$secondary-font-titles: 30px;
+$mobile-font-titles:22px;
 $mobile-secondary-font-titles: 20px;
 $card-font-text: 18px;
 $mobile-card-font-text: 15px;
@@ -133,7 +133,6 @@ footer{
     @include flex(row, center, unset);
     .card{
         width: 300px;
-        //background-color: dimgray;
         @extend main;
         @include flex(column, unset, center);
         border: none;
@@ -283,6 +282,13 @@ footer{
 }
 
 /*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE Y LISTS*/
+.list-title{
+    color: $text-color;
+    @include mobile(){
+        font-size: $mobile-font-titles;
+    }
+}
+
 .records-cards{
     @include flex(column, unset, center);
 }
@@ -298,9 +304,12 @@ footer{
     }
 }
 
-.list-title{
+.list-text{
     font-family: 'Oswald', sans-serif;
-    font-size: 32px;
+    font-size: $secondary-font-titles;
+    @include mobile(){
+        font-size: $mobile-secondary-font-titles;
+    }
     border-bottom-width: 1px;
     border-bottom-color: darkblue;
     border-bottom-style: solid;

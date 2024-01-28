@@ -49,7 +49,7 @@ header .title .title-text h1 {
 }
 @media screen and (max-width: 520px) {
   header .title .title-text h1 {
-    font-size: 30px;
+    font-size: 22px;
   }
 }
 header .nav {
@@ -73,7 +73,7 @@ header .nav {
   align-items: center;
   flex-direction: row;
   list-style-type: none;
-  font-size: 18px;
+  font-size: 16px;
 }
 @media screen and (max-width: 520px) {
   .navbar-list {
@@ -116,12 +116,12 @@ footer {
 }
 
 .welcome-title h2 {
-  font-size: 23px;
+  font-size: 30px;
   color: rgb(229, 228, 228);
 }
 
 .welcome-text {
-  font-size: 18px;
+  font-size: 16px;
   color: rgb(229, 228, 228);
 }
 @media screen and (max-width: 520px) {
@@ -154,7 +154,7 @@ footer {
 }
 .card-container .card a {
   color: deeppink;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
 }
 @media screen and (max-width: 520px) {
@@ -316,6 +316,15 @@ footer {
 }
 
 /*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE Y LISTS*/
+.list-title {
+  color: rgb(229, 228, 228);
+}
+@media screen and (max-width: 520px) {
+  .list-title {
+    font-size: 22px;
+  }
+}
+
 .records-cards {
   display: flex;
   justify-content: unset;
@@ -332,13 +341,18 @@ footer {
   height: 250px;
 }
 
-.list-title {
+.list-text {
   font-family: "Oswald", sans-serif;
-  font-size: 32px;
+  font-size: 30px;
   border-bottom-width: 1px;
   border-bottom-color: darkblue;
   border-bottom-style: solid;
   color: rgb(229, 228, 228);
+}
+@media screen and (max-width: 520px) {
+  .list-text {
+    font-size: 20px;
+  }
 }
 
 /*ESTILOS PARA WISHLIST*/
@@ -445,17 +459,17 @@ footer {
 .resume, .use, .membership {
   padding: 1rem;
   color: rgb(229, 228, 228);
-  font-size: 18px;
+  font-size: 16px;
 }
 .resume h4, .use h4, .membership h4 {
   font-size: 48px;
 }
 .resume h6, .use h6, .membership h6 {
-  font-size: 23px;
+  font-size: 30px;
 }
 @media screen and (max-width: 900px) {
   .resume h4, .use h4, .membership h4 {
-    font-size: 30px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 520px) {
@@ -463,7 +477,7 @@ footer {
     font-size: 13px;
   }
   .resume h4, .use h4, .membership h4 {
-    font-size: 30px;
+    font-size: 22px;
   }
   .resume h6, .use h6, .membership h6 {
     font-size: 20px;
