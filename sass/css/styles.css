@@ -276,6 +276,14 @@ footer {
   grid-template-areas: "profile-section user-stats";
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 520px) {
+  .top-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 
 .profile-section {
   display: flex;
@@ -290,11 +298,28 @@ footer {
   padding: 1rem;
   color: rgb(229, 228, 228);
 }
+@media screen and (max-width: 900px) {
+  .name {
+    font-size: 20px;
+  }
+}
 
 .avatar {
   height: 150px;
   width: 150px;
   border-radius: 50%;
+}
+@media screen and (max-width: 900px) {
+  .avatar {
+    height: 100px;
+    width: 100px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .avatar {
+    height: 70px;
+    width: 70px;
+  }
 }
 
 .user-stats {
@@ -303,12 +328,22 @@ footer {
   align-items: center;
   flex-direction: row;
 }
+@media screen and (max-width: 520px) {
+  .user-stats {
+    padding-top: 1rem;
+  }
+}
 
 .stat {
   padding: 1rem;
   border-right: grey solid 1px;
-  font-size: 20px;
+  font-size: 16px;
   color: rgb(229, 228, 228);
+}
+@media screen and (max-width: 520px) {
+  .stat {
+    font-size: 13px;
+  }
 }
 
 .user-stats p {
@@ -332,13 +367,22 @@ footer {
   flex-direction: column;
 }
 
-.cards {
-  padding: 1rem;
-}
-
 .cards img {
+  padding: 0.5rem;
   width: 220px;
   height: 250px;
+}
+@media screen and (max-width: 900px) {
+  .cards img {
+    width: 180px;
+    height: 210px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .cards img {
+    width: 140px;
+    height: 170px;
+  }
 }
 
 .list-text {

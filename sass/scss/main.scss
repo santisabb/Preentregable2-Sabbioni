@@ -245,6 +245,9 @@ footer{
     grid-template-areas: 
     'profile-section user-stats';
     margin-bottom: 2rem;
+    @include mobile(){
+        @include flex(column, center, center);
+    }
 }
 
 .profile-section{
@@ -256,23 +259,40 @@ footer{
     position: relative;
     padding: 1rem;
     color: $text-color;
+    @include tablet(){
+        font-size: $mobile-secondary-font-titles;
+    }
 }
 
 .avatar{
     height: 150px;
     width: 150px;
     border-radius: 50%;
+    @include tablet(){
+        height: 100px;
+        width: 100px;
+    }
+    @include mobile(){
+        height: 70px;
+        width: 70px;
+    }
 }
 
 .user-stats{
     @include flex(row, center, center);
+    @include mobile(){
+        padding-top: 1rem;
+    }
 }
 
 .stat{
     padding: 1rem;
     border-right: grey solid 1px;
-    font-size: 20px;
-    color: $text-color;
+    font-size: $main-font-text;
+    color: $text-color; 
+    @include mobile(){
+        font-size: $mobile-font-text;
+    }
 }
 
 .user-stats {
@@ -294,13 +314,18 @@ footer{
 }
 
 .cards{
-    padding: 1rem;
-}
-
-.cards{
     img{
+        padding: 0.5rem;
         width: 220px;
         height: 250px;
+        @include tablet(){
+            width: 180px;
+            height: 210px;
+        }
+        @include mobile(){
+            width: 140px;
+            height: 170px;
+        }
     }
 }
 
