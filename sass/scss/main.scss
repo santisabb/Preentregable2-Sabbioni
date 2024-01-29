@@ -347,7 +347,23 @@ footer{
 }
 
 .list-container{
+    .list-title{
+        font-size: $secondary-font-titles;
+        @include tablet(){
+            font-size: $mobile-secondary-font-titles;
+        }
+    }
     @include flex(column, unset, center);
+    .card-container{
+        @include mobile(){
+            @include flex(column, center, center);;
+        }
+        .card{
+            @include tablet(){
+                width: 250px;
+            }
+        }
+    }
 }
 
 /*ESTILOS PARA ARCHIVOS DEL DIRECTORIO RECORD*/
