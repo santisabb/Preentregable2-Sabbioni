@@ -107,9 +107,6 @@ footer{
     //esta parte se aplicara a TODA las paginas en general
     @include flex(row, center , center);
     background-color: rgb(133, 133, 133);
-    @include mobile(){
-        display: none;
-    }
 }
 //lo siguiente solo se aplica en index.html
 .welcome-section{
@@ -248,98 +245,94 @@ footer{
     @include mobile(){
         @include flex(column, center, center);
     }
-}
-
-.profile-section{
-    @include flex(row, center, center);
-    padding-top: 0.5rem;
-}
-
-.name{
-    position: relative;
-    padding: 1rem;
-    color: $text-color;
-    @include tablet(){
-        font-size: $mobile-secondary-font-titles;
+    .profile-section{
+        @include flex(row, center, center);
+        padding-top: 0.5rem;
+        .name{
+            position: relative;
+            padding: 1rem;
+            color: $text-color;
+            @include tablet(){
+                font-size: $mobile-secondary-font-titles;
+            }
+        }
+        .avatar{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            @include tablet(){
+                height: 100px;
+                width: 100px;
+            }
+            @include mobile(){
+                height: 70px;
+                width: 70px;
+            }
+        }
+    }
+    .user-stats{
+        @include flex(row, center, center);
+        @include mobile(){
+            padding-top: 1rem;
+        }
+        p{
+            text-align: center;
+        }
+        .stat{
+            padding: 1rem;
+            border-right: grey solid 1px;
+            font-size: $main-font-text;
+            color: $text-color; 
+            @include mobile(){
+                font-size: $mobile-font-text;
+            }
+        }
     }
 }
 
-.avatar{
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    @include tablet(){
-        height: 100px;
-        width: 100px;
-    }
-    @include mobile(){
-        height: 70px;
-        width: 70px;
-    }
-}
-
-.user-stats{
-    @include flex(row, center, center);
-    @include mobile(){
-        padding-top: 1rem;
-    }
-}
-
-.stat{
-    padding: 1rem;
-    border-right: grey solid 1px;
-    font-size: $main-font-text;
-    color: $text-color; 
-    @include mobile(){
-        font-size: $mobile-font-text;
-    }
-}
-
-.user-stats {
-    p{
-        text-align: center;
-    }
-}
 
 /*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE Y LISTS*/
-.list-title{
-    color: $text-color;
-    @include mobile(){
-        font-size: $mobile-font-titles;
-    }
-}
+
 
 .records-cards{
     @include flex(column, unset, center);
-}
-
-.cards{
-    img{
-        padding: 0.5rem;
-        width: 220px;
-        height: 250px;
-        @include tablet(){
-            width: 180px;
-            height: 210px;
+    .cards{
+        img{
+            padding: 0.5rem;
+            width: 220px;
+            height: 250px;
+            @include tablet(){
+                width: 180px;
+                height: 210px;
+            }
+            @include mobile(){
+                width: 140px;
+                height: 170px;
+            }
         }
+    }
+    .list-title{
+        color: $text-color;
         @include mobile(){
-            width: 140px;
-            height: 170px;
+            font-size: $mobile-font-titles;
         }
+    }
+    .list-text{
+        font-family: 'Oswald', sans-serif;
+        font-size: $secondary-font-titles;
+        @include mobile(){
+            font-size: $mobile-secondary-font-titles;
+        }
+        border-bottom-width: 1px;
+        border-bottom-color: darkblue;
+        border-bottom-style: solid;
+        color: $text-color;
     }
 }
 
-.list-text{
-    font-family: 'Oswald', sans-serif;
-    font-size: $secondary-font-titles;
-    @include mobile(){
-        font-size: $mobile-secondary-font-titles;
-    }
-    border-bottom-width: 1px;
-    border-bottom-color: darkblue;
-    border-bottom-style: solid;
-    color: $text-color;
-}
+
+
+
 /*ESTILOS PARA WISHLIST*/
 .navbar-wishlist{
     margin-bottom: 200px;
@@ -370,80 +363,94 @@ footer{
 .grid-container-record{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-}
-
-.grid-item-record{
-    @include flex(column, unset , center);
-    padding-top: 1rem;
-    h5{
-        color: $text-color;
+    @include tablet(){
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
-    h3{
-        font-size: 40px;
-        font-family: 'Caprasimo', serif;
-        color: $text-color;
+    @include mobile(){
+        @include flex(column, unset, center);
     }
-    p{
-        color: $text-color;
-    }
-    h6{
-        color:$text-color;
-    }
-    img{
-        width: 80%;
-    }
-}
-
-.tracklist-ordered{
-    list-style-type: decimal-leading-zero;
-    .track{
-        color: $text-color;
-        font-size: $main-font-text;
-    }
-}
-
-.sidebar{
-    position: relative;
-    right: 30px;
-    .sidebar-actions{
-        @include flex(column, center, center);
-        list-style-type: $list-style; 
-        .logo-text{
-            font-size: $card-font-text;
-        }    
-        .actions-logos{
-            width: 2rem;
-            &:hover{
-                color: green;
+    .grid-item-record-left{
+        @include flex(column, unset , center);
+        padding-top: 1rem;
+        h5{
+            color: $text-color;
+        }
+        h3{
+            font-size: 40px;
+            font-family: 'Caprasimo', serif;
+            color: $text-color;
+            @include tablet(){
+                font-size: $mobile-font-titles;
             }
         }
-        .actions1{
-            @include flex(row, space-between, unset);
-            .action{
+        p{
+            color: $text-color;
+        }
+        h6{
+            color:$text-color;
+        }
+        img{
+            width: 80%;
+            @include tablet(){
+                width: 60%;
+            }
+        }
+    }
+    
+    .grid-item-record-center{
+        @extend .grid-item-record-left;
+    }
+    
+    .grid-item-record-right{
+        @extend .grid-item-record-left;
+        @include tablet(){
+            @include flex(row, center, center);
+        }
+    }
+    .tracklist-ordered{
+        list-style-type: decimal-leading-zero;
+        .track{
+            color: $text-color;
+            font-size: $main-font-text;
+        }
+    }
+    .sidebar{
+        position: relative;
+        right: 30px;
+        .sidebar-actions{
+            @include flex(column, center, center);
+            list-style-type: $list-style; 
+            .logo-text{
+                font-size: $card-font-text;
+            }    
+            .actions-logos{
+                width: 2rem;
+                &:hover{
+                    color: green;
+                }
+            }
+            .actions1{
+                @include flex(row, space-between, unset);
+                .action{
+                    @include flex(column, unset, center);
+                    padding: 1rem;
+                }
+            }
+            .rate{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                .rate-panel{
+                    display: inline-block;
+                }            
+            } 
+            .add-list{
                 @include flex(column, unset, center);
-                padding: 1rem;
-            }
+            }       
         }
-        .rate{
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            .rate-panel{
-                display: inline-block;
-            }            
-        } 
-        .add-list{
-            @include flex(column, unset, center);
-        }       
     }
 }
-
-
-
-
-
-
-
 
 //ESTILOS PARA ABOUT.HTML
 .resume{
