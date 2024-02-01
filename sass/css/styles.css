@@ -45,11 +45,11 @@ header .title .title-text:hover {
   color: aquamarine;
 }
 header .title .title-text h1 {
-  font-size: 48px;
+  font-size: 3em;
 }
 @media screen and (max-width: 520px) {
   header .title .title-text h1 {
-    font-size: 22px;
+    font-size: 2em;
   }
 }
 header .nav {
@@ -73,11 +73,11 @@ header .nav {
   align-items: center;
   flex-direction: row;
   list-style-type: none;
-  font-size: 16px;
+  font-size: 1.25em;
 }
 @media screen and (max-width: 520px) {
   .navbar-list {
-    font-size: 13px;
+    font-size: 1em;
   }
 }
 .navbar-list li {
@@ -93,6 +93,10 @@ header .nav {
 
 main, .card-container .card {
   background-color: rgb(65, 65, 65);
+}
+main p, .card-container .card p {
+  font-size: 1.25em;
+  color: rgb(229, 228, 228);
 }
 
 footer {
@@ -111,17 +115,17 @@ footer {
 }
 
 .welcome-title h2 {
-  font-size: 30px;
-  color: rgb(229, 228, 228);
+  font-size: 2em;
+  color: indianred;
 }
 
 .welcome-text {
-  font-size: 16px;
+  font-size: 1.25em;
   color: rgb(229, 228, 228);
 }
 @media screen and (max-width: 520px) {
   .welcome-text {
-    font-size: 13px;
+    font-size: 1em;
   }
 }
 
@@ -144,17 +148,22 @@ footer {
   width: 100%;
 }
 .card-container .card h4 {
-  font-size: 18px;
+  font-size: 1.5em;
   color: rgb(229, 228, 228);
+}
+@media screen and (max-width: 520px) {
+  .card-container .card h4 {
+    font-size: 1.25em;
+  }
 }
 .card-container .card a {
   color: deeppink;
-  font-size: 16px;
+  font-size: 1.25em;
   text-decoration: none;
 }
 @media screen and (max-width: 520px) {
   .card-container .card a {
-    font-size: 13px;
+    font-size: 1em;
   }
 }
 .card-container .card a:hover {
@@ -293,7 +302,7 @@ footer {
 }
 @media screen and (max-width: 900px) {
   .top-section .profile-section .name {
-    font-size: 20px;
+    font-size: 1.25em;
   }
 }
 .top-section .profile-section .avatar {
@@ -330,12 +339,12 @@ footer {
 .top-section .user-stats .stat {
   padding: 1rem;
   border-right: grey solid 1px;
-  font-size: 16px;
+  font-size: 1.25em;
   color: rgb(229, 228, 228);
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 900px) {
   .top-section .user-stats .stat {
-    font-size: 13px;
+    font-size: 1em;
   }
 }
 
@@ -363,25 +372,27 @@ footer {
     height: 170px;
   }
 }
-.records-cards .list-title {
-  color: rgb(229, 228, 228);
-}
-@media screen and (max-width: 520px) {
-  .records-cards .list-title {
-    font-size: 22px;
-  }
-}
 .records-cards .list-text {
   font-family: "Oswald", sans-serif;
-  font-size: 30px;
+  font-size: 2em;
   border-bottom-width: 1px;
   border-bottom-color: darkblue;
   border-bottom-style: solid;
-  color: rgb(229, 228, 228);
+  color: aquamarine;
 }
 @media screen and (max-width: 520px) {
   .records-cards .list-text {
-    font-size: 20px;
+    font-size: 1.25em;
+  }
+}
+
+.list-title {
+  color: indianred;
+  font-size: 2em;
+}
+@media screen and (max-width: 520px) {
+  .list-title {
+    font-size: 1.75em;
   }
 }
 
@@ -399,14 +410,6 @@ footer {
   justify-content: unset;
   align-items: center;
   flex-direction: column;
-}
-.list-container .list-title {
-  font-size: 30px;
-}
-@media screen and (max-width: 900px) {
-  .list-container .list-title {
-    font-size: 20px;
-  }
 }
 @media screen and (max-width: 520px) {
   .list-container .card-container {
@@ -458,7 +461,7 @@ footer {
 }
 @media screen and (max-width: 900px) {
   .grid-container-record .grid-item-record-left h3, .grid-container-record .grid-item-record-right h3, .grid-container-record .grid-item-record-center h3 {
-    font-size: 22px;
+    font-size: 2em;
   }
 }
 .grid-container-record .grid-item-record-left p, .grid-container-record .grid-item-record-right p, .grid-container-record .grid-item-record-center p {
@@ -488,7 +491,7 @@ footer {
 }
 .grid-container-record .tracklist-ordered .track {
   color: rgb(229, 228, 228);
-  font-size: 16px;
+  font-size: 1.25em;
 }
 .grid-container-record .sidebar {
   position: relative;
@@ -502,7 +505,7 @@ footer {
   list-style-type: none;
 }
 .grid-container-record .sidebar .sidebar-actions .logo-text {
-  font-size: 18px;
+  font-size: 1.5em;
 }
 .grid-container-record .sidebar .sidebar-actions .actions-logos {
   width: 2rem;
@@ -541,28 +544,26 @@ footer {
 .resume, .use, .membership {
   padding: 1rem;
   color: rgb(229, 228, 228);
-  font-size: 16px;
+  font-size: 1.25em;
 }
 .resume h4, .use h4, .membership h4 {
-  font-size: 48px;
+  font-size: 2em;
+  color: indianred;
 }
-.resume h6, .use h6, .membership h6 {
-  font-size: 30px;
+.resume h3, .use h3, .membership h3 {
+  color: aquamarine;
 }
 @media screen and (max-width: 900px) {
+  .resume, .use, .membership {
+    font-size: 1em;
+  }
   .resume h4, .use h4, .membership h4 {
-    font-size: 22px;
+    font-size: 1.75em;
   }
 }
 @media screen and (max-width: 520px) {
   .resume, .use, .membership {
-    font-size: 13px;
-  }
-  .resume h4, .use h4, .membership h4 {
-    font-size: 22px;
-  }
-  .resume h6, .use h6, .membership h6 {
-    font-size: 20px;
+    font-size: 1em;
   }
 }
 
