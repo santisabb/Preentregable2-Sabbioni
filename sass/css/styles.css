@@ -13,20 +13,20 @@ header {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 520px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
 header .title {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   padding: 1rem;
-}
-@media screen and (max-width: 520px) {
-  header .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-  }
 }
 header .title .title-img {
   width: 15%;
@@ -38,7 +38,7 @@ header .title .title-text {
 }
 @media screen and (max-width: 520px) {
   header .title .title-text {
-    padding-right: unset;
+    padding-right: 0.5rem;
   }
 }
 header .title .title-text:hover {
@@ -55,16 +55,45 @@ header .title .title-text h1 {
 header .nav {
   position: relative;
   right: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 @media screen and (max-width: 900px) {
   header .nav {
     position: unset;
   }
 }
+header .nav .navbar .burger-menu {
+  display: none;
+}
 @media screen and (max-width: 520px) {
-  header .navbar {
-    right: 15px;
+  header .nav .navbar .burger-menu {
+    display: block;
   }
+}
+@media screen and (max-width: 520px) {
+  header .nav .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 520px) {
+  header .nav .navbar .navbar-list {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+  }
+}
+header .nav .navbar .visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .navbar-list {
