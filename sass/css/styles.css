@@ -120,19 +120,17 @@ header .nav .navbar .visible {
   color: rgb(229, 228, 228);
 }
 
-main, .card-container .card {
+main, .card-container .card, footer {
   background-color: rgb(65, 65, 65);
+  padding: 1rem;
 }
-main p, .card-container .card p {
+main p, .card-container .card p, footer p {
   font-size: 1.25em;
   color: rgb(229, 228, 228);
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  text-align: center;
   background-color: rgb(133, 133, 133);
 }
 

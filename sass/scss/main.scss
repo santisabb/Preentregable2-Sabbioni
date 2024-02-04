@@ -125,11 +125,13 @@ main{
         font-size: $main-font-text;
         color: $text-color;
     }
+    padding: 1rem;
 }
 
 footer{
     //esta parte se aplicara a TODA las paginas en general
-    @include flex(row, center , center);
+    @extend main;
+    text-align: center;
     background-color: rgb(133, 133, 133);
 }
 //lo siguiente solo se aplica en index.html
