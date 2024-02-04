@@ -1,6 +1,11 @@
-const navbar = document.querySelector('#navbar-list');
-const burger = document.querySelector('#burger-menu');
+const navbar = document.querySelector('#navbar');
+const open = document.querySelector('#open-menu')
+const close = document.querySelector('#close-menu');
 
-burger.addEventListener("click", ()=>{
+open.addEventListener("click", ()=>{
     navbar.classList.add('visible');
+})
+
+close.addEventListener("click", ()=>{
+    navbar.classList.remove('visible');
 })

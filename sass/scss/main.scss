@@ -74,31 +74,45 @@ header{
             position: unset;
         }
         .navbar{
-            .burger-menu{
-                display: none;
-                @include mobile(){
-                    display: block;
+            @include mobile(){
+                //opacity: 0;
+                visibility: hidden;
+                .visible{
+                    @include mobile(){
+                    opacity: 1;
+                    visibility: visible;
+                    }
                 }
+                
             }
             @include mobile(){
                 //display: none;
-                @include flex(column, center, center);
+                @include flex(column, center, end);
             }
             .navbar-list{
                 @include mobile(){
-                    opacity: 0;
-                    visibility: hidden;
                     @include flex(column, center, end);
                 }
             }
-            .visible{
-                opacity: 1;
-                visibility: visible;
-            }
         }
     }
-
+    .open-menu{
+        display: none;
+        @include mobile(){
+            display: block;
+            border: none;
+            font-size: 1.5em;
+            color: $title-color2;
+            background-color: #191919
+        }
+    }
+    .close-menu{
+        @extend .open-menu;
+        position: relative;
+        right: 1rem;
+    }
 }
+
 .navbar-list{
     @include flex(row, center, center);
     list-style-type: $list-style;

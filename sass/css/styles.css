@@ -65,35 +65,48 @@ header .nav {
     position: unset;
   }
 }
-header .nav .navbar .burger-menu {
-  display: none;
-}
 @media screen and (max-width: 520px) {
-  header .nav .navbar .burger-menu {
-    display: block;
+  header .nav .navbar {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 520px) and (max-width: 520px) {
+  header .nav .navbar .visible {
+    opacity: 1;
+    visibility: visible;
   }
 }
 @media screen and (max-width: 520px) {
   header .nav .navbar {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     flex-direction: column;
   }
 }
 @media screen and (max-width: 520px) {
   header .nav .navbar .navbar-list {
-    opacity: 0;
-    visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: end;
     flex-direction: column;
   }
 }
-header .nav .navbar .visible {
-  opacity: 1;
-  visibility: visible;
+header .open-menu, header .close-menu {
+  display: none;
+}
+@media screen and (max-width: 520px) {
+  header .open-menu, header .close-menu {
+    display: block;
+    border: none;
+    font-size: 1.5em;
+    color: aquamarine;
+    background-color: #191919;
+  }
+}
+header .close-menu {
+  position: relative;
+  right: 1rem;
 }
 
 .navbar-list {
