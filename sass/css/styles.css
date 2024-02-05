@@ -187,12 +187,12 @@ footer {
 .card-container .card .card-img {
   width: 100%;
 }
-.card-container .card h4, .card-container .card .record-section .tracklist .ord-tracklist, .record-section .tracklist .card-container .card .ord-tracklist {
+.card-container .card h4 {
   font-size: 1.5em;
   color: rgb(229, 228, 228);
 }
 @media screen and (max-width: 520px) {
-  .card-container .card h4, .card-container .card .record-section .tracklist .ord-tracklist, .record-section .tracklist .card-container .card .ord-tracklist {
+  .card-container .card h4 {
     font-size: 1.25em;
   }
 }
@@ -470,16 +470,31 @@ footer {
   display: grid;
   grid-template-areas: "record-data record-data" "tracklist reviews" "user-actions user-review";
 }
+@media screen and (max-width: 520px) {
+  .record-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 .record-section .record-data {
   grid-area: record-data;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-image: url(../../assets/images/after\ del\ after.jpg);
+  background-image: url(../../assets/images/records\ covers.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media screen and (max-width: 520px) {
+  .record-section .record-data {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+  }
 }
 .record-section .record-data .record-cover {
   height: 80%;
@@ -502,31 +517,58 @@ footer {
 .record-section .tracklist {
   grid-area: tracklist;
 }
-.record-section .tracklist h4, .record-section .tracklist .ord-tracklist {
+.record-section .tracklist h4 {
+  color: indianred;
+  margin-left: 1rem;
+}
+.record-section .tracklist .ord-tracklist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   color: #FFFFFF;
+  font-size: 1.25em;
+}
+@media screen and (max-width: 900px) {
+  .record-section .tracklist .ord-tracklist {
+    font-size: 1em;
+  }
 }
 .record-section .reviews {
   grid-area: reviews;
+  border-left: solid 2px #000000;
+}
+@media screen and (max-width: 520px) {
+  .record-section .reviews {
+    border-left: none;
+  }
 }
 .record-section .reviews .comment {
   border-bottom: #000000 1px solid;
+  margin-left: 0.5rem;
+}
+@media screen and (max-width: 520px) {
+  .record-section .reviews .comment {
+    font-size: 1em;
+  }
+  .record-section .reviews .comment p {
+    font-size: 1em;
+  }
 }
 .record-section .reviews .comment h6 {
   color: aquamarine;
-}
-.record-section .open-actions {
-  display: none;
 }
 .record-section .user-actions {
   grid-area: user-actions;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
 }
-.record-section .user-actions .close-actions {
-  display: none;
-}
 .record-section .user-actions .bi {
   font-size: 1.75em;
+  color: aquamarine;
+}
+.record-section .user-actions .bi:hover {
+  color: indianred;
 }
 .record-section .user-actions .actions1, .record-section .user-actions .actions3, .record-section .user-actions .actions2 .rate-panel {
   display: flex;
@@ -558,7 +600,13 @@ footer {
 }
 @media screen and (max-width: 520px) {
   .record-section .user-actions {
-    visibility: hidden;
+    margin-top: 1rem;
+  }
+  .record-section .user-actions .bi {
+    font-size: 1.25em;
+  }
+  .record-section .user-actions p {
+    font-size: 1em;
   }
 }
 .record-section .user-review {
@@ -570,8 +618,13 @@ footer {
   margin-top: 1rem;
   margin-left: 2rem;
 }
-.record-section .user-review h4, .record-section .user-review .tracklist .ord-tracklist, .record-section .tracklist .user-review .ord-tracklist {
+.record-section .user-review h4 {
   color: indianred;
+}
+@media screen and (max-width: 520px) {
+  .record-section .user-review {
+    display: none;
+  }
 }
 
 .resume, .use, .membership {
@@ -579,7 +632,7 @@ footer {
   color: rgb(229, 228, 228);
   font-size: 1.25em;
 }
-.resume h4, .use h4, .membership h4, .resume .record-section .tracklist .ord-tracklist, .use .record-section .tracklist .ord-tracklist, .membership .record-section .tracklist .ord-tracklist, .record-section .tracklist .resume .ord-tracklist, .record-section .tracklist .use .ord-tracklist, .record-section .tracklist .membership .ord-tracklist {
+.resume h4, .use h4, .membership h4 {
   font-size: 2em;
   color: indianred;
 }
@@ -590,7 +643,7 @@ footer {
   .resume, .use, .membership {
     font-size: 1em;
   }
-  .resume h4, .use h4, .membership h4, .resume .record-section .tracklist .ord-tracklist, .use .record-section .tracklist .ord-tracklist, .membership .record-section .tracklist .ord-tracklist, .record-section .tracklist .resume .ord-tracklist, .record-section .tracklist .use .ord-tracklist, .record-section .tracklist .membership .ord-tracklist {
+  .resume h4, .use h4, .membership h4 {
     font-size: 1.75em;
   }
 }
