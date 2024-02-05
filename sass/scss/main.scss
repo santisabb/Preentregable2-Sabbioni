@@ -139,7 +139,7 @@ main{
         font-size: $main-font-text;
         color: $text-color;
     }
-    padding: 1rem;
+    //padding: 1rem;
 }
 
 footer{
@@ -147,6 +147,7 @@ footer{
     @extend main;
     text-align: center;
     background-color: rgb(133, 133, 133);
+    padding: 1rem;
 }
 //lo siguiente solo se aplica en index.html
 .welcome-section{
@@ -393,94 +394,107 @@ footer{
 }
 
 /*ESTILOS PARA ARCHIVOS DEL DIRECTORIO RECORD*/
-.grid-container-record{
+.record-section{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    @include tablet(){
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
-    @include mobile(){
-        @include flex(column, unset, center);
-    }
-    .grid-item-record-left{
-        @include flex(column, unset , center);
-        padding-top: 1rem;
-        h5{
-            color: $text-color;
+    grid-template-areas: 
+    "record-data record-data"
+    "tracklist reviews"
+    "user-actions user-review";
+    .record-data{
+        grid-area: record-data;
+        @include flex(row, center, center);
+        background-image: url(../../assets/images/after\ del\ after.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .record-cover{
+            height: 80%;
+            width: 300px;
+            border-radius: 10%;
         }
-        h3{
-            font-size: 40px;
-            font-family: 'Caprasimo', serif;
-            color: $text-color;
-            @include tablet(){
-                font-size: $secondary-font-titles;
+        .data{
+            @include flex(column, center, start);
+            margin-left: 1rem;
+            z-index: 4;
+            padding: 2.25rem 0 1.5rem 0;
+            background: rgba(0,0,0,.6);
+            h2{
+                color: $title-color2;
             }
-        }
-        p{
-            color: $text-color;
-        }
-        h6{
-            color:$text-color;
-        }
-        img{
-            width: 80%;
-            @include tablet(){
-                width: 60%;
+            h3{
+                @extend h2;
             }
         }
     }
-    
-    .grid-item-record-center{
-        @extend .grid-item-record-left;
+    .tracklist{
+        grid-area: tracklist;
+        h4{
+            color: #FFFFFF;
+        }
+        .ord-tracklist{
+            @extend h4;
+        }
     }
-    
-    .grid-item-record-right{
-        @extend .grid-item-record-left;
-        @include tablet(){
+    .reviews{
+        grid-area: reviews;
+        .comment{
+            border-bottom: #000000 1px solid;
+            h6{
+                color: $title-color2;
+            }
+        }
+    }
+    .open-actions{
+        display: none;
+    }
+    .user-actions{
+        .close-actions{
+            display: none;
+        }
+        grid-area: user-actions;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        .bi{
+            font-size: 1.75em;
+        }
+        .actions1{
             @include flex(row, center, center);
-        }
-    }
-    .tracklist-ordered{
-        list-style-type: decimal-leading-zero;
-        .track{
-            color: $text-color;
-            font-size: $main-font-text;
-        }
-    }
-    .sidebar{
-        position: relative;
-        right: 30px;
-        .sidebar-actions{
-            @include flex(column, center, center);
-            list-style-type: $list-style; 
-            .logo-text{
-                font-size: $card-font-text;
-            }    
-            .actions-logos{
-                width: 2rem;
-                &:hover{
-                    color: green;
-                }
-            }
-            .actions1{
-                @include flex(row, space-between, unset);
-                .action{
-                    @include flex(column, unset, center);
-                    padding: 1rem;
-                }
-            }
-            .rate{
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                .rate-panel{
-                    display: inline-block;
-                }            
-            } 
-            .add-list{
+            gap: 1rem;
+            border-bottom: #000000 2px solid;
+            .played{
                 @include flex(column, unset, center);
-            }       
+            }
+            .fav{
+                @extend .played;
+            }
+            .wishlist{
+                @extend .played;
+            }
+        }
+        .actions2{
+            @include flex(column, center,center );
+            border-bottom: #000000 2px solid;
+            .rate-panel{
+                @extend .actions1;
+                border-bottom: none;
+                gap: 0.5rem;
+            }
+        }
+        .actions3{
+            @extend .actions1;
+            border-bottom: none;
+        }
+        @include mobile(){
+            visibility: hidden;
+        }
+    }
+    .user-review{
+        grid-area: user-review;
+        @include flex(column, center, start);
+        margin-top: 1rem;
+        margin-left: 2rem;
+        h4{
+            color: $title-color1;
         }
     }
 }

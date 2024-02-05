@@ -135,7 +135,6 @@ header .close-menu {
 
 main, .card-container .card, footer {
   background-color: rgb(65, 65, 65);
-  padding: 1rem;
 }
 main p, .card-container .card p, footer p {
   font-size: 1.25em;
@@ -145,6 +144,7 @@ main p, .card-container .card p, footer p {
 footer {
   text-align: center;
   background-color: rgb(133, 133, 133);
+  padding: 1rem;
 }
 
 .welcome-section, .welcome-text {
@@ -154,7 +154,7 @@ footer {
   flex-direction: column;
 }
 
-.welcome-title h2 {
+.welcome-title h2, .welcome-title .record-section .record-data .data h3, .record-section .record-data .data .welcome-title h3 {
   font-size: 2em;
   color: indianred;
 }
@@ -187,12 +187,12 @@ footer {
 .card-container .card .card-img {
   width: 100%;
 }
-.card-container .card h4 {
+.card-container .card h4, .card-container .card .record-section .tracklist .ord-tracklist, .record-section .tracklist .card-container .card .ord-tracklist {
   font-size: 1.5em;
   color: rgb(229, 228, 228);
 }
 @media screen and (max-width: 520px) {
-  .card-container .card h4 {
+  .card-container .card h4, .card-container .card .record-section .tracklist .ord-tracklist, .record-section .tracklist .card-container .card .ord-tracklist {
     font-size: 1.25em;
   }
 }
@@ -466,119 +466,112 @@ footer {
 }
 
 /*ESTILOS PARA ARCHIVOS DEL DIRECTORIO RECORD*/
-.grid-container-record {
+.record-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "record-data record-data" "tracklist reviews" "user-actions user-review";
 }
-@media screen and (max-width: 900px) {
-  .grid-container-record {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
+.record-section .record-data {
+  grid-area: record-data;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-image: url(../../assets/images/after\ del\ after.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-@media screen and (max-width: 520px) {
-  .grid-container-record {
-    display: flex;
-    justify-content: unset;
-    align-items: center;
-    flex-direction: column;
-  }
+.record-section .record-data .record-cover {
+  height: 80%;
+  width: 300px;
+  border-radius: 10%;
 }
-.grid-container-record .grid-item-record-left, .grid-container-record .grid-item-record-right, .grid-container-record .grid-item-record-center {
+.record-section .record-data .data {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin-left: 1rem;
+  z-index: 4;
+  padding: 2.25rem 0 1.5rem 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.record-section .record-data .data h2, .record-section .record-data .data h3 {
+  color: aquamarine;
+}
+.record-section .tracklist {
+  grid-area: tracklist;
+}
+.record-section .tracklist h4, .record-section .tracklist .ord-tracklist {
+  color: #FFFFFF;
+}
+.record-section .reviews {
+  grid-area: reviews;
+}
+.record-section .reviews .comment {
+  border-bottom: #000000 1px solid;
+}
+.record-section .reviews .comment h6 {
+  color: aquamarine;
+}
+.record-section .open-actions {
+  display: none;
+}
+.record-section .user-actions {
+  grid-area: user-actions;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+.record-section .user-actions .close-actions {
+  display: none;
+}
+.record-section .user-actions .bi {
+  font-size: 1.75em;
+}
+.record-section .user-actions .actions1, .record-section .user-actions .actions3, .record-section .user-actions .actions2 .rate-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+  border-bottom: #000000 2px solid;
+}
+.record-section .user-actions .actions1 .played, .record-section .user-actions .actions3 .played, .record-section .user-actions .actions2 .rate-panel .played, .record-section .user-actions .actions1 .wishlist, .record-section .user-actions .actions3 .wishlist, .record-section .user-actions .actions2 .rate-panel .wishlist, .record-section .user-actions .actions1 .fav, .record-section .user-actions .actions3 .fav, .record-section .user-actions .actions2 .rate-panel .fav {
   display: flex;
   justify-content: unset;
   align-items: center;
   flex-direction: column;
-  padding-top: 1rem;
 }
-.grid-container-record .grid-item-record-left h5, .grid-container-record .grid-item-record-right h5, .grid-container-record .grid-item-record-center h5 {
-  color: rgb(229, 228, 228);
-}
-.grid-container-record .grid-item-record-left h3, .grid-container-record .grid-item-record-right h3, .grid-container-record .grid-item-record-center h3 {
-  font-size: 40px;
-  font-family: "Caprasimo", serif;
-  color: rgb(229, 228, 228);
-}
-@media screen and (max-width: 900px) {
-  .grid-container-record .grid-item-record-left h3, .grid-container-record .grid-item-record-right h3, .grid-container-record .grid-item-record-center h3 {
-    font-size: 2em;
-  }
-}
-.grid-container-record .grid-item-record-left p, .grid-container-record .grid-item-record-right p, .grid-container-record .grid-item-record-center p {
-  color: rgb(229, 228, 228);
-}
-.grid-container-record .grid-item-record-left h6, .grid-container-record .grid-item-record-right h6, .grid-container-record .grid-item-record-center h6 {
-  color: rgb(229, 228, 228);
-}
-.grid-container-record .grid-item-record-left img, .grid-container-record .grid-item-record-right img, .grid-container-record .grid-item-record-center img {
-  width: 80%;
-}
-@media screen and (max-width: 900px) {
-  .grid-container-record .grid-item-record-left img, .grid-container-record .grid-item-record-right img, .grid-container-record .grid-item-record-center img {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 900px) {
-  .grid-container-record .grid-item-record-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-}
-.grid-container-record .tracklist-ordered {
-  list-style-type: decimal-leading-zero;
-}
-.grid-container-record .tracklist-ordered .track {
-  color: rgb(229, 228, 228);
-  font-size: 1.25em;
-}
-.grid-container-record .sidebar {
-  position: relative;
-  right: 30px;
-}
-.grid-container-record .sidebar .sidebar-actions {
+.record-section .user-actions .actions2 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  list-style-type: none;
+  border-bottom: #000000 2px solid;
 }
-.grid-container-record .sidebar .sidebar-actions .logo-text {
-  font-size: 1.5em;
+.record-section .user-actions .actions2 .rate-panel {
+  border-bottom: none;
+  gap: 0.5rem;
 }
-.grid-container-record .sidebar .sidebar-actions .actions-logos {
-  width: 2rem;
+.record-section .user-actions .actions3 {
+  border-bottom: none;
 }
-.grid-container-record .sidebar .sidebar-actions .actions-logos:hover {
-  color: green;
+@media screen and (max-width: 520px) {
+  .record-section .user-actions {
+    visibility: hidden;
+  }
 }
-.grid-container-record .sidebar .sidebar-actions .actions1 {
+.record-section .user-review {
+  grid-area: user-review;
   display: flex;
-  justify-content: space-between;
-  align-items: unset;
-  flex-direction: row;
-}
-.grid-container-record .sidebar .sidebar-actions .actions1 .action {
-  display: flex;
-  justify-content: unset;
-  align-items: center;
+  justify-content: center;
+  align-items: start;
   flex-direction: column;
-  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
 }
-.grid-container-record .sidebar .sidebar-actions .rate {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.grid-container-record .sidebar .sidebar-actions .rate .rate-panel {
-  display: inline-block;
-}
-.grid-container-record .sidebar .sidebar-actions .add-list {
-  display: flex;
-  justify-content: unset;
-  align-items: center;
-  flex-direction: column;
+.record-section .user-review h4, .record-section .user-review .tracklist .ord-tracklist, .record-section .tracklist .user-review .ord-tracklist {
+  color: indianred;
 }
 
 .resume, .use, .membership {
@@ -586,7 +579,7 @@ footer {
   color: rgb(229, 228, 228);
   font-size: 1.25em;
 }
-.resume h4, .use h4, .membership h4 {
+.resume h4, .use h4, .membership h4, .resume .record-section .tracklist .ord-tracklist, .use .record-section .tracklist .ord-tracklist, .membership .record-section .tracklist .ord-tracklist, .record-section .tracklist .resume .ord-tracklist, .record-section .tracklist .use .ord-tracklist, .record-section .tracklist .membership .ord-tracklist {
   font-size: 2em;
   color: indianred;
 }
@@ -597,7 +590,7 @@ footer {
   .resume, .use, .membership {
     font-size: 1em;
   }
-  .resume h4, .use h4, .membership h4 {
+  .resume h4, .use h4, .membership h4, .resume .record-section .tracklist .ord-tracklist, .use .record-section .tracklist .ord-tracklist, .membership .record-section .tracklist .ord-tracklist, .record-section .tracklist .resume .ord-tracklist, .record-section .tracklist .use .ord-tracklist, .record-section .tracklist .membership .ord-tracklist {
     font-size: 1.75em;
   }
 }
