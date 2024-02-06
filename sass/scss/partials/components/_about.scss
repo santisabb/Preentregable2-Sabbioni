@@ -1,0 +1,41 @@
+.section-form{
+    @include flex(row, space-around, unset);
+    @include mobile(){
+        @include flex(column, center, center);
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.resume{
+    padding: 1rem;
+    color: $text-color;
+    font-size: $main-font-text;
+    h4{
+        font-size: $secondary-font-titles;
+        color: $title-color1;
+    }
+    h3{
+        color: $title-color2;
+    }
+    @include tablet(){
+        font-size: $mobile-font-text;
+        h4{
+            font-size: $mobile-font-titles;
+        }
+    }
+    @include mobile(){
+        font-size: $mobile-font-text;
+    }
+}
+
+.membership{
+    @extend .resume;
+}
+
+.use{
+    @extend .resume;
+}

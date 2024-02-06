@@ -1,0 +1,19 @@
+//MIXINS
+@mixin flex($direction, $justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin tablet{
+    @media screen and (max-width:900px) {
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media screen and (max-width:520px) {
+        @content;
+    }
+}

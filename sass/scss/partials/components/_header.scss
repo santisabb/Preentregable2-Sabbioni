@@ -1,0 +1,96 @@
+header{
+    //esta parte se aplicara a TODA las paginas en general
+    @include flex(row, center, center );
+    @include tablet(){
+        @include flex(column, center , center);
+    }
+    @include mobile(){
+        @include flex(row, center, center)
+    }
+    background-color: #191919;
+    .title{
+        @include flex(row, center , center);
+        padding: 1rem;
+        .title-img{
+            width: 15%;
+        }
+        .title-text{
+            padding-right: 1rem;
+            @include mobile(){
+                padding-right: 0.5rem;
+            }
+            text-decoration: $link-style;
+            color: $title-color1;
+            &:hover{
+                color: $title-color2;
+            }
+            h1{
+                font-size: $main-font-titles;
+            }
+            @include mobile(){
+                h1{
+                    font-size: $secondary-font-titles;
+                }
+            }
+        }
+    }
+    .nav{
+        position: relative;
+        right: 125px;
+        @include flex(row, center, center);
+        @include tablet(){
+            position: unset;
+        }
+        .navbar{
+            @include mobile(){
+                //opacity: 0;
+                visibility: hidden;
+                .visible{
+                    @include mobile(){
+                    opacity: 1;
+                    visibility: visible;
+                    }
+                }
+                
+            }
+            @include mobile(){
+                //display: none;
+                @include flex(column, center, end);
+            }
+            .navbar-list{
+                @include flex(row, center, center);
+                list-style-type: $list-style;
+                font-size: $main-font-text;
+                li {
+                    padding: 1rem;
+                    a {
+                        color: blue;
+                        text-decoration: $link-style;
+                        &:hover{
+                            color: rgb(229, 228, 228);
+                        }
+                    }
+                }
+                @include mobile(){
+                    @include flex(column, center, end);
+                    font-size: $mobile-font-text;
+                }
+            }
+        }
+    }
+    .open-menu{
+        display: none;
+        @include mobile(){
+            display: block;
+            border: none;
+            font-size: 1.5em;
+            color: $title-color2;
+            background-color: #191919
+        }
+    }
+    .close-menu{
+        @extend .open-menu;
+        position: relative;
+        right: 1rem;
+    }
+}

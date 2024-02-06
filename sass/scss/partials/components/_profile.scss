@@ -1,0 +1,53 @@
+/*ESTILOS PARA PROFILE.HTML*/
+.top-section{
+    display: grid;
+    grid-template-areas: 
+    'profile-section user-stats';
+    margin-bottom: 2rem;
+    @include mobile(){
+        @include flex(column, center, center);
+    }
+    .profile-section{
+        @include flex(row, center, center);
+        padding-top: 0.5rem;
+        .name{
+            position: relative;
+            padding: 1rem;
+            color: $text-color;
+            @include tablet(){
+                font-size: $main-font-text;
+            }
+        }
+        .avatar{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            @include tablet(){
+                height: 100px;
+                width: 100px;
+            }
+            @include mobile(){
+                height: 70px;
+                width: 70px;
+            }
+        }
+    }
+    .user-stats{
+        @include flex(row, center, center);
+        @include mobile(){
+            padding-top: 1rem;
+        }
+        p{
+            text-align: center;
+        }
+        .stat{
+            padding: 1rem;
+            border-right: grey solid 1px;
+            font-size: $main-font-text;
+            color: $text-color; 
+            @include tablet(){
+                font-size: $mobile-font-text;
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+main{
+    //esta parte se aplicara a TODA las paginas en general
+    background-color: rgb(65, 65, 65);
+    p{
+        color: $text-color;
+        font-size: $main-font-text;
+    }
+}

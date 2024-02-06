@@ -1,0 +1,17 @@
+.welcome-section{
+    @include flex(column, center, center);
+}
+.welcome-title{
+    h2{
+        font-size: $secondary-font-titles;
+        color: $title-color1;
+    }
+}
+.welcome-text{
+    font-size: $main-font-text;
+    color: $text-color;
+    @extend .welcome-section;
+    @include mobile(){
+        font-size: $mobile-font-text;
+    }
+}

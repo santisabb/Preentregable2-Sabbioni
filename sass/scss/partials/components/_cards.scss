@@ -1,0 +1,31 @@
+.card-container{ 
+    @include flex(row, center, unset);
+    .card{
+        width: 300px;
+        @extend main;
+        @include flex(column, unset, center);
+        border: none;
+        padding: 1rem;
+        .card-img{
+            width: 100%;
+        }
+        h4{
+            font-size: $card-font-text;
+            color: $text-color;
+            @include mobile(){
+                font-size: $main-font-text;
+            }
+        }
+        a{
+            color: deeppink;
+            font-size: $main-font-text;
+            @include mobile(){
+                font-size: $mobile-font-text;
+            }
+            text-decoration: $link-style;
+            &:hover{
+                color: black;
+            }
+        }
+    }
+}

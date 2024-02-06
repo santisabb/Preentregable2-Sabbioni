@@ -1,0 +1,39 @@
+/*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE Y LISTS*/
+
+
+.records-cards{
+    @include flex(column, unset, center);
+    .cards{
+        img{
+            padding: 0.5rem;
+            width: 220px;
+            height: 250px;
+            @include tablet(){
+                width: 180px;
+                height: 210px;
+            }
+            @include mobile(){
+                width: 140px;
+                height: 170px;
+            }
+        }
+    }
+    .list-text{
+        font-family: 'Oswald', sans-serif;
+        font-size: $secondary-font-titles;
+        @include mobile(){
+            font-size: $main-font-text;
+        }
+        border-bottom-width: 1px;
+        border-bottom-color: darkblue;
+        border-bottom-style: solid;
+        color: $title-color2;
+    }
+}
+.list-title{
+    color: $title-color1;
+    font-size: $secondary-font-titles;
+    @include mobile(){
+        font-size: $mobile-font-titles;
+    }
+}

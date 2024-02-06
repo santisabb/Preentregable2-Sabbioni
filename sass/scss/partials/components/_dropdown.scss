@@ -1,0 +1,9 @@
+//ESTILOS DE DROPDOWN 
+.filter{
+    @include flex(column,center,center);
+    padding: 1rem;
+    label{
+        color: $text-color;
+        font-size: $main-font-text;
+    }
+}

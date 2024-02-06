@@ -1,0 +1,13 @@
+.list-container{
+    @include flex(column, unset, center);
+    .card-container{
+        @include mobile(){
+            @include flex(column, center, center);;
+        }
+        .card{
+            @include tablet(){
+                width: 250px;
+            }
+        }
+    }
+}

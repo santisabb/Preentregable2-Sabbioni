@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -84,12 +89,31 @@ header .nav {
     flex-direction: column;
   }
 }
+header .nav .navbar .navbar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
+  font-size: 1.25em;
+}
+header .nav .navbar .navbar-list li {
+  padding: 1rem;
+}
+header .nav .navbar .navbar-list li a {
+  color: blue;
+  text-decoration: none;
+}
+header .nav .navbar .navbar-list li a:hover {
+  color: rgb(229, 228, 228);
+}
 @media screen and (max-width: 520px) {
   header .nav .navbar .navbar-list {
     display: flex;
     justify-content: center;
     align-items: end;
     flex-direction: column;
+    font-size: 1em;
   }
 }
 header .open-menu, header .close-menu {
@@ -109,36 +133,12 @@ header .close-menu {
   right: 1rem;
 }
 
-.navbar-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  list-style-type: none;
-  font-size: 1.25em;
-}
-@media screen and (max-width: 520px) {
-  .navbar-list {
-    font-size: 1em;
-  }
-}
-.navbar-list li {
-  padding: 1rem;
-}
-.navbar-list li a {
-  color: blue;
-  text-decoration: none;
-}
-.navbar-list li a:hover {
-  color: rgb(229, 228, 228);
-}
-
 main, .card-container .card, footer {
   background-color: rgb(65, 65, 65);
 }
 main p, .card-container .card p, footer p {
-  font-size: 1.25em;
   color: rgb(229, 228, 228);
+  font-size: 1.25em;
 }
 
 footer {
@@ -210,7 +210,11 @@ footer {
   color: black;
 }
 
-/*ESTILOS PARA CONTACT.HTML*/
+#button {
+  width: 30%;
+  margin: 10px;
+}
+
 .section-form {
   display: flex;
   justify-content: space-around;
@@ -232,12 +236,32 @@ footer {
   width: 40%;
 }
 
-#button {
-  width: 30%;
-  margin: 10px;
+.resume, .use, .membership {
+  padding: 1rem;
+  color: rgb(229, 228, 228);
+  font-size: 1.25em;
+}
+.resume h4, .use h4, .membership h4 {
+  font-size: 2em;
+  color: indianred;
+}
+.resume h3, .use h3, .membership h3 {
+  color: aquamarine;
+}
+@media screen and (max-width: 900px) {
+  .resume, .use, .membership {
+    font-size: 1em;
+  }
+  .resume h4, .use h4, .membership h4 {
+    font-size: 1.75em;
+  }
+}
+@media screen and (max-width: 520px) {
+  .resume, .use, .membership {
+    font-size: 1em;
+  }
 }
 
-/*ESTILOS PARA RECORDS.HTML*/
 .filters {
   display: flex;
   justify-content: center;
@@ -254,64 +278,16 @@ footer {
   }
 }
 
-.nav-records {
+.filter {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-}
-.nav-records ul {
-  margin-bottom: unset;
-}
-@media screen and (max-width: 520px) {
-  .nav-records {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-  }
-}
-
-/*ESTILOS DE DROPDOWN SE APLICAN EN RECORDS Y WISHLIST*/
-.dropdown {
-  display: inline-block;
-  position: relative;
+  flex-direction: column;
   padding: 1rem;
 }
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  width: 100%;
-  overflow: auto;
-  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown-content a {
-  display: block;
-  color: #000000;
-  padding: 5px;
-  text-decoration: none;
-}
-
-.dropdown-content a:hover {
-  color: #FFFFFF;
-  background-color: #00A4BD;
-}
-
-.records {
-  display: flex;
-  justify-content: unset;
-  align-items: center;
-  flex-direction: column;
-}
-
-.heading {
-  border-bottom: solid darkblue 1px;
+.filter label {
+  color: rgb(229, 228, 228);
+  font-size: 1.25em;
 }
 
 /*ESTILOS PARA PROFILE.HTML*/
@@ -436,15 +412,6 @@ footer {
   }
 }
 
-/*ESTILOS PARA WISHLIST*/
-.navbar-wishlist {
-  margin-bottom: 200px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-}
-
 .list-container {
   display: flex;
   justify-content: unset;
@@ -465,7 +432,6 @@ footer {
   }
 }
 
-/*ESTILOS PARA ARCHIVOS DEL DIRECTORIO RECORD*/
 .record-section {
   display: grid;
   grid-template-areas: "record-data record-data" "tracklist reviews" "user-actions user-review";
@@ -624,32 +590,6 @@ footer {
 @media screen and (max-width: 520px) {
   .record-section .user-review {
     display: none;
-  }
-}
-
-.resume, .use, .membership {
-  padding: 1rem;
-  color: rgb(229, 228, 228);
-  font-size: 1.25em;
-}
-.resume h4, .use h4, .membership h4 {
-  font-size: 2em;
-  color: indianred;
-}
-.resume h3, .use h3, .membership h3 {
-  color: aquamarine;
-}
-@media screen and (max-width: 900px) {
-  .resume, .use, .membership {
-    font-size: 1em;
-  }
-  .resume h4, .use h4, .membership h4 {
-    font-size: 1.75em;
-  }
-}
-@media screen and (max-width: 520px) {
-  .resume, .use, .membership {
-    font-size: 1em;
   }
 }
 
