@@ -5,11 +5,14 @@
     h2{
         font-size: $secondary-font-titles;
         color: $title-color1;
+        font-family: map-get($map: $google-fonts, $key: protest-strike);
     }
 }
 .welcome-text{
+    padding: 1rem;
     font-size: $main-font-text;
     color: $text-color;
+    font-family: map-get($map: $google-fonts, $key: eczar);
     @extend .welcome-section;
     @include mobile(){
         font-size: $mobile-font-text;

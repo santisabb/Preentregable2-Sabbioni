@@ -12,6 +12,7 @@
         h4{
             font-size: $card-font-text;
             color: $text-color;
+            font-family: map-get($map: $google-fonts, $key: single-day);
             @include mobile(){
                 font-size: $main-font-text;
             }

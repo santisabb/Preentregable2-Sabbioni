@@ -4,4 +4,10 @@ footer{
     text-align: center;
     background-color: map-get($map: $bgcolors, $key: footer);
     padding: 1rem;
+    font-family: map-get($map: $google-fonts, $key: diphy);
+    @include mobile(){
+        p{
+            font-size: $mobile-font-text;
+        }
+    }
 }

@@ -26,6 +26,7 @@ header{
             }
             h1{
                 font-size: $main-font-titles;
+                font-family: map-get($map: $google-fonts, $key: lilita);
             }
             @include mobile(){
                 h1{

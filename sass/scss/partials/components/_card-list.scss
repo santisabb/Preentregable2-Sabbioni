@@ -2,12 +2,13 @@
 
 
 .records-cards{
-    @include flex(column, unset, center);
+    @include flex(column, center, center);
     .cards{
+        padding-left: 1rem;
         img{
             padding: 0.5rem;
-            width: 220px;
-            height: 250px;
+            width: 200px;
+            height: 230px;
             @include tablet(){
                 width: 180px;
                 height: 210px;
@@ -19,7 +20,7 @@
         }
     }
     .list-text{
-        font-family: 'Oswald', sans-serif;
+        font-family: map-get($map: $google-fonts, $key: protest-strike);
         font-size: $secondary-font-titles;
         @include mobile(){
             font-size: $main-font-text;
@@ -33,6 +34,8 @@
 .list-title{
     color: $title-color1;
     font-size: $secondary-font-titles;
+    padding: 1rem;
+    font-family: map-get($map: $google-fonts, $key: single-day);
     @include mobile(){
         font-size: $mobile-font-titles;
     }

@@ -1,12 +1,18 @@
+//mapa para los colores de fondo
 $bgcolors:(
     header:#191919,
     main:rgb(65, 65, 65),
     footer: rgb(133, 133, 133),
 );
-
+//mapa para elegir distintos tipos de fuente traidas de google fonts
 $google-fonts:(
     capra: 'Caprasimo',
-    pacific: 'Pacific',
-    protest: 'Protest',
-    riot: 'Riot',
+    pacific: 'Pacifico',
+    protest-riot: 'Protest Riot',
+    single-day:'Single Day',
+    bebas: 'Bebas Neue',
+    lilita: 'Lilita One',
+    protest-strike: 'Protest Strike',
+    eczar: 'Eczar',
+    diphy: 'Diphylleia',
 );

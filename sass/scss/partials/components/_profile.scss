@@ -1,4 +1,4 @@
-/*ESTILOS PARA PROFILE.HTML*/
+//ESTILOS PARA PROFILE.HTML
 .top-section{
     display: grid;
     grid-template-areas: 
@@ -44,7 +44,8 @@
             padding: 1rem;
             border-right: grey solid 1px;
             font-size: $main-font-text;
-            color: $text-color; 
+            color: $text-color;
+            font-family: map-get($map: $google-fonts, $key: eczar); 
             @include tablet(){
                 font-size: $mobile-font-text;
             }
