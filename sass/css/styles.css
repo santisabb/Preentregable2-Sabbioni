@@ -272,14 +272,6 @@ footer {
   flex-direction: row;
   margin-bottom: 200px;
 }
-@media screen and (max-width: 900px) {
-  .filters {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-}
 
 .filter {
   display: flex;
@@ -439,6 +431,11 @@ footer {
   display: grid;
   grid-template-areas: "record-data record-data" "tracklist reviews" "user-actions user-review";
 }
+@media screen and (max-width: 900px) {
+  .record-section {
+    grid-template-areas: "record-data record-data" "tracklist tracklist" "reviews reviews" "user-actions user-review";
+  }
+}
 @media screen and (max-width: 520px) {
   .record-section {
     display: flex;
@@ -507,23 +504,25 @@ footer {
 .record-section .reviews {
   grid-area: reviews;
   border-left: solid 2px #000000;
+  margin-left: 0.5rem;
 }
 @media screen and (max-width: 520px) {
   .record-section .reviews {
     border-left: none;
   }
 }
+@media screen and (max-width: 900px) {
+  .record-section .reviews {
+    border-left: none;
+    font-size: 1em;
+  }
+  .record-section .reviews p {
+    font-size: 1em;
+  }
+}
 .record-section .reviews .comment {
   border-bottom: #000000 1px solid;
-  margin-left: 0.5rem;
-}
-@media screen and (max-width: 520px) {
-  .record-section .reviews .comment {
-    font-size: 1em;
-  }
-  .record-section .reviews .comment p {
-    font-size: 1em;
-  }
+  margin-left: 1rem;
 }
 .record-section .reviews .comment h6 {
   color: aquamarine;
@@ -532,6 +531,11 @@ footer {
   grid-area: user-actions;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
+}
+@media screen and (max-width: 900px) {
+  .record-section .user-actions p {
+    font-size: 1em;
+  }
 }
 .record-section .user-actions .bi {
   font-size: 1.75em;
@@ -568,15 +572,17 @@ footer {
 .record-section .user-actions .actions3 {
   border-bottom: none;
 }
+@media screen and (max-width: 900px) {
+  .record-section .user-actions .bi {
+    font-size: 1.5em;
+  }
+}
 @media screen and (max-width: 520px) {
   .record-section .user-actions {
     margin-top: 1rem;
   }
   .record-section .user-actions .bi {
     font-size: 1.25em;
-  }
-  .record-section .user-actions p {
-    font-size: 1em;
   }
 }
 .record-section .user-review {

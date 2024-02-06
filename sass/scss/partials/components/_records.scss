@@ -1,7 +1,4 @@
 .filters{
     @include flex(row, center, center);
     margin-bottom: 200px;
-    @include tablet(){
-        @include flex(column, center, center);
-    }
 }
