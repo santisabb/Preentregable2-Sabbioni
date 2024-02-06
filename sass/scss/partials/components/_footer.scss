@@ -2,6 +2,6 @@ footer{
     //esta parte se aplicara a TODA las paginas en general
     @extend main;
     text-align: center;
-    background-color: rgb(133, 133, 133);
+    background-color: map-get($map: $bgcolors, $key: footer);
     padding: 1rem;
 }

@@ -1,10 +1,21 @@
 //BASE
+//Reset
 @import 'partials/base/reset';
+//Tipografias
+@import 'partials/base/tipografia';
+//----------------------------------
+
+
 //UTILITIES
 //Variables
 @import 'partials/utilities/variables';
 //Mixins
 @import 'partials/utilities/mixins';
+//Maps
+@import 'partials/utilities/maps';
+//----------------------------------
+
+
 //COMPONENTS
 //Header
 @import 'partials/components/header';
