@@ -85,7 +85,7 @@ header{
             border: none;
             font-size: 1.5em;
             color: $title-color2;
-            background-color: #191919
+            background-color: map-get($map: $bgcolors, $key: header)
         }
     }
     .close-menu{

@@ -482,6 +482,7 @@ footer {
 }
 .record-section .record-data .data h2, .record-section .record-data .data h3 {
   color: aquamarine;
+  font-family: "Caprasimo";
 }
 .record-section .tracklist {
   grid-area: tracklist;

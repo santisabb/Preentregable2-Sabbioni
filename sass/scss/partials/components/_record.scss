@@ -33,6 +33,7 @@
             background: rgba(0,0,0,.6);
             h2{
                 color: $title-color2;
+                font-family: map-get($map: $google-fonts, $key: capra);
             }
             h3{
                 @extend h2;
