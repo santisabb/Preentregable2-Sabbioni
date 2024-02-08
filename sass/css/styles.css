@@ -162,6 +162,12 @@ footer {
   }
 }
 
+.title-h3 {
+  text-align: center;
+  color: aquamarine;
+  font-family: "Protest Strike";
+}
+
 .welcome-section, .welcome-text {
   display: flex;
   justify-content: center;
@@ -189,17 +195,24 @@ footer {
 
 .card-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: unset;
   flex-direction: row;
+  padding: 1rem;
+  flex-wrap: wrap;
 }
 .card-container .card {
   width: 300px;
+  height: auto;
+  background-color: rgb(34, 33, 33);
   display: flex;
   justify-content: unset;
   align-items: center;
   flex-direction: column;
-  border: none;
+  border: solid 1px black;
+  border-radius: 10%;
+  gap: 1rem;
+  margin-bottom: 10px;
   padding: 1rem;
 }
 .card-container .card .card-img {
@@ -218,6 +231,10 @@ footer {
 .card-container .card a {
   color: deeppink;
   font-size: 1.25em;
+  padding: 8px;
+  border: 1px solid rgb(35, 32, 32);
+  border-radius: 10%;
+  background-color: rgb(160, 160, 160);
   text-decoration: none;
 }
 @media screen and (max-width: 520px) {
@@ -226,7 +243,7 @@ footer {
   }
 }
 .card-container .card a:hover {
-  color: black;
+  color: rgb(229, 228, 228);
 }
 
 #button {

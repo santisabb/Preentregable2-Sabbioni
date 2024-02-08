@@ -1,10 +1,17 @@
 .card-container{ 
-    @include flex(row, center, unset);
+    @include flex(row, space-evenly, unset);
+    padding: 1rem;
+    flex-wrap: wrap;
     .card{
         width: 300px;
+        height: auto;
+        background-color: rgb(34, 33, 33);
         @extend main;
         @include flex(column, unset, center);
-        border: none;
+        border: solid 1px black;
+        border-radius: 10%;
+        gap: 1rem;
+        margin-bottom: 10px;
         padding: 1rem;
         .card-img{
             width: 100%;
@@ -20,12 +27,16 @@
         a{
             color: deeppink;
             font-size: $main-font-text;
+            padding: 8px;
+            border: 1px solid rgb(35, 32, 32);
+            border-radius: 10%;
+            background-color: rgb(160, 160, 160);
             @include mobile(){
                 font-size: $mobile-font-text;
             }
             text-decoration: $link-style;
             &:hover{
-                color: black;
+                color: rgb(229, 228, 228);
             }
         }
     }
