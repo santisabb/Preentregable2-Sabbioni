@@ -187,114 +187,6 @@ footer {
     font-size: 1em;
   }
 }
-.popular-reviews .review-container {
-  width: 80%;
-  border-bottom-style: solid;
-}
-@media screen and (max-width: 520px) {
-  .popular-reviews .review-container {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
-    border-bottom-right-radius: unset;
-  }
-}
-.popular-reviews .review-container .record-cover {
-  height: 120px;
-  width: 100px;
-  align-self: self-start;
-}
-@media screen and (max-width: 520px) {
-  .popular-reviews .review-container .record-cover {
-    height: 100px;
-    width: 80px;
-  }
-}
-.popular-reviews .review-container .data {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-}
-@media screen and (max-width: 520px) {
-  .popular-reviews .review-container .data {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-  }
-}
-.popular-reviews .review-container .data .record-title {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-direction: row;
-}
-.popular-reviews .review-container .data .record-title * {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 520px) {
-  .popular-reviews .review-container .data .record-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-.popular-reviews .review-container .data .record-title .record-name {
-  margin-right: 0.5rem;
-}
-.popular-reviews .review-container .data .record-title .release-year {
-  align-self: self-start;
-}
-.popular-reviews .review-container .data .profile-data {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  flex-direction: row;
-}
-@media screen and (max-width: 520px) {
-  .popular-reviews .review-container .data .profile-data {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    flex-direction: row;
-  }
-}
-.popular-reviews .review-container .data .profile-data img {
-  border-radius: 50%;
-  width: 10%;
-}
-.popular-reviews .review-container .data .profile-data p {
-  text-align: center;
-  margin-bottom: 0;
-}
-.popular-reviews .user-rate {
-  display: flex;
-  align-self: self-start;
-}
-.popular-reviews .user-rate .rate-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.popular-reviews .user-rate .rate-logo .bi {
-  color: green;
-  padding: 2px;
-}
-.popular-reviews .review-text {
-  width: 70%;
-}
-@media screen and (max-width: 900px) {
-  .popular-reviews .review-text {
-    width: 100%;
-  }
-  .popular-reviews .review-text p {
-    font-size: 1em;
-  }
-}
 
 .welcome-section, .welcome-text {
   display: flex;
@@ -317,6 +209,130 @@ footer {
 }
 @media screen and (max-width: 520px) {
   .welcome-text {
+    font-size: 1em;
+  }
+}
+
+.review-container {
+  width: 80%;
+  border-bottom-style: solid;
+}
+@media screen and (max-width: 520px) {
+  .review-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    border-bottom-right-radius: unset;
+  }
+}
+.review-container .review-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.review-container .review-header .record-cover {
+  height: 120px;
+  width: 100px;
+  align-self: self-start;
+}
+@media screen and (max-width: 520px) {
+  .review-container .review-header .record-cover {
+    height: 100px;
+    width: 80px;
+  }
+}
+.review-container .review-header .data {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin-left: 1em;
+}
+@media screen and (max-width: 520px) {
+  .review-container .review-header .data {
+    display: grid;
+    grid-template-areas: "record-title profile-data" "user-rate profile-data";
+  }
+}
+.review-container .review-header .data .record-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+.review-container .review-header .data .record-title * {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 520px) {
+  .review-container .review-header .data .record-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.review-container .review-header .data .record-title .record-name {
+  margin-right: 0.5rem;
+}
+.review-container .review-header .data .record-title .release-year {
+  align-self: self-start;
+}
+.review-container .review-header .data .profile-data {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+@media screen and (max-width: 520px) {
+  .review-container .review-header .data .profile-data {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    flex-direction: row;
+  }
+}
+.review-container .review-header .data .profile-data img {
+  border-radius: 50%;
+  width: 10%;
+}
+@media screen and (max-width: 900px) {
+  .review-container .review-header .data .profile-data img {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .review-container .review-header .data .profile-data img {
+    width: 20%;
+  }
+}
+.review-container .review-header .data .profile-data p {
+  text-align: center;
+  margin-bottom: 0;
+}
+.review-container .review-header .data .user-rate {
+  display: flex;
+  align-self: self-start;
+}
+.review-container .review-header .data .user-rate .rate-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.review-container .review-header .data .user-rate .rate-logo .bi {
+  color: green;
+  padding: 2px;
+}
+.review-container .review-header .review-text {
+  width: 70%;
+}
+@media screen and (max-width: 900px) {
+  .review-container .review-header .review-text {
+    width: 100%;
+  }
+  .review-container .review-header .review-text p {
     font-size: 1em;
   }
 }
