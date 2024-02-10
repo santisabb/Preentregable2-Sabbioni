@@ -536,6 +536,47 @@ footer {
   }
 }
 
+.last-review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.last-review h3 {
+  border-bottom-style: solid;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .last-review h3 {
+    align-self: flex-start;
+    margin-left: 42px;
+    margin-bottom: 1rem;
+  }
+}
+.last-review .review-container {
+  width: 50%;
+}
+
+.interactions-data {
+  display: flex;
+  justify-content: center;
+  align-items: unset;
+  flex-direction: column;
+}
+.interactions-data h4 {
+  text-align: center;
+  text-decoration: underline;
+}
+.interactions-data .interaction {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.interactions-data .interaction * {
+  margin-bottom: 0;
+}
+
 /*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE Y LISTS*/
 .records-cards {
   display: flex;
