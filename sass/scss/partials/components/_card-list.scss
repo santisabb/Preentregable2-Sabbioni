@@ -5,17 +5,28 @@
     @include flex(column, center, center);
     .cards{
         padding-left: 1rem;
-        img{
-            padding: 0.5rem;
-            width: 200px;
-            height: 230px;
-            @include tablet(){
-                width: 180px;
-                height: 210px;
-            }
-            @include mobile(){
-                width: 140px;
-                height: 170px;
+        @include flex(row, center, center);
+        @include tablet(){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+        .card{
+            @include flex(column, center, center);
+            background-color: map-get($map: $bgcolors, $key: main);
+            border-style: none;
+            img{
+                padding: 0.5rem;
+                width: 200px;
+                height: 230px;
+                @include tablet(){
+                    width: 180px;
+                    height: 210px;
+                }
+                @include mobile(){
+                    width: 140px;
+                    height: 170px;
+                }
             }
         }
     }
