@@ -6,6 +6,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Eczar&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -110,11 +112,11 @@ header .nav .navbar .navbar-list li {
   padding: 1rem;
 }
 header .nav .navbar .navbar-list li a {
-  color: blue;
+  color: aquamarine;
   text-decoration: none;
 }
 header .nav .navbar .navbar-list li a:hover {
-  color: rgb(229, 228, 228);
+  color: indianred;
 }
 @media screen and (max-width: 520px) {
   header .nav .navbar .navbar-list {
@@ -225,6 +227,14 @@ footer {
     flex-direction: column;
     border-bottom-right-radius: unset;
   }
+}
+.review-container h4 {
+  color: aquamarine;
+  font-family: "Lilita One";
+}
+.review-container p {
+  color: rgb(229, 228, 228);
+  font-family: "PT Sans Narrow";
 }
 .review-container .review-header {
   display: flex;
@@ -456,6 +466,11 @@ footer {
     flex-direction: column;
   }
 }
+.section-header .filters-title h3 {
+  color: indianred;
+  font-family: "Eczar";
+  margin-bottom: 0;
+}
 .section-header .filters {
   display: flex;
   justify-content: center;
@@ -467,6 +482,11 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+.section-header .filters .filter .year-filter, .section-header .filters .filter .genre-filter {
+  margin-left: 1rem;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 10%;
 }
 @media screen and (max-width: 520px) {
   .section-header .filters {
@@ -570,6 +590,7 @@ footer {
 }
 
 .last-review {
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -577,7 +598,9 @@ footer {
 }
 .last-review h3 {
   border-bottom-style: solid;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  font-family: "Bebas Neue";
+  color: indianred;
 }
 @media screen and (max-width: 520px) {
   .last-review h3 {
@@ -589,8 +612,33 @@ footer {
 .last-review .review-container {
   width: 50%;
 }
+@media screen and (max-width: 520px) {
+  .last-review .review-container .review-header .data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.last-review .review-container .review-header .data .profile-data img {
+  height: 50px;
+  width: 50px;
+}
+@media screen and (max-width: 900px) {
+  .last-review .review-container .review-header .data .profile-data img {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .last-review .review-container .review-header .data .profile-data img {
+    height: 30px;
+    width: 30px;
+  }
+}
 
 .interactions-data {
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: unset;
@@ -599,8 +647,11 @@ footer {
 .interactions-data h4 {
   text-align: center;
   text-decoration: underline;
+  color: aquamarine;
+  font-family: "Protest Riot";
 }
 .interactions-data .interaction {
+  color: rgb(229, 228, 228);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -610,12 +661,15 @@ footer {
   margin-bottom: 0;
 }
 
-/*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE Y LISTS*/
+/*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE,LISTS E INDEX*/
 .records-cards {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.records-cards .list-text {
+  margin-top: 50px;
 }
 .records-cards .cards {
   padding-left: 1rem;
@@ -656,6 +710,19 @@ footer {
     height: 170px;
   }
 }
+.records-cards .cards .card h5 {
+  color: indianred;
+  font-family: "Caprasimo";
+}
+@media screen and (max-width: 520px) {
+  .records-cards .cards .card h5 {
+    font-size: 1em;
+  }
+}
+.records-cards .cards .card h6 {
+  color: rgb(229, 228, 228);
+  font-family: "Lilita One";
+}
 .records-cards .list-text {
   font-family: "Protest Strike";
   font-size: 2em;
@@ -671,15 +738,19 @@ footer {
 }
 
 .list-title {
-  color: indianred;
+  color: rgb(155, 217, 238);
   font-size: 2em;
   padding: 1rem;
-  font-family: "Single Day";
+  font-family: "Architects Daughter";
 }
 @media screen and (max-width: 520px) {
   .list-title {
     font-size: 1.75em;
   }
+}
+
+.list-title {
+  text-align: center;
 }
 
 .list-container {

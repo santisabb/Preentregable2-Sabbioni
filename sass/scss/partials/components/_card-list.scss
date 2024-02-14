@@ -1,8 +1,9 @@
-/*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE Y LISTS*/
-
-
+/*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE,LISTS E INDEX*/
 .records-cards{
     @include flex(column, center, center);
+    .list-text{
+        margin-top: 50px;
+    }
     .cards{
         padding-left: 1rem;
         @include flex(row, center, center);
@@ -28,6 +29,17 @@
                     height: 170px;
                 }
             }
+            h5{
+                color: $title-color1;
+                font-family: map-get($map: $google-fonts, $key: capra);
+                @include mobile(){
+                    font-size: $mobile-font-text;
+                }
+            }
+            h6{
+                color: rgb(229, 228, 228);
+                font-family: map-get($map: $google-fonts, $key:lilita );
+            }
         }
     }
     .list-text{
@@ -43,10 +55,10 @@
     }
 }
 .list-title{
-    color: $title-color1;
+    color: rgb(155, 217, 238);
     font-size: $secondary-font-titles;
     padding: 1rem;
-    font-family: map-get($map: $google-fonts, $key: single-day);
+    font-family: map-get($map: $google-fonts, $key: arquitecto);
     @include mobile(){
         font-size: $mobile-font-titles;
     }

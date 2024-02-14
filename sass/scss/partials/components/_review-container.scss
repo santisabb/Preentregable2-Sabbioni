@@ -5,6 +5,14 @@
     @include flex(column, start, center);
     border-bottom-right-radius: unset;
     }
+    h4{
+        color: $title-color2;
+        font-family: map-get($map: $google-fonts, $key: lilita);
+    }
+    p{
+        color: rgb(229, 228, 228);
+        font-family: map-get($map: $google-fonts, $key: sans-pt);
+    }
     .review-header{
         @include flex(row-reverse, center,center);
         .record-cover{
@@ -20,7 +28,6 @@
             @include flex(column,center, start);
             margin-left: 1em;
             @include mobile(){
-                //@include flex(row, space-between, center);
                 display: grid;
                 grid-template-areas: 
                 'record-title profile-data'

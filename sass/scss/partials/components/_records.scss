@@ -3,9 +3,24 @@
     @include tablet(){
         @include flex(column, center,center);
     }
+    .filters-title{
+        h3{
+            color: $title-color1;
+            font-family: map-get($map: $google-fonts, $key: eczar);
+            margin-bottom: 0;
+        }
+    }
     .filters{
         @include flex(row, center, center);
         .filter{
+            .year-filter{
+                margin-left: 1rem;
+                box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+                border-radius: 10%;
+            }
+            .genre-filter{
+                @extend .year-filter;
+            }
             @include flex(row,center,center);
         }
         @include mobile(){
