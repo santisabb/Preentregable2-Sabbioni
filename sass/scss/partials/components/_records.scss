@@ -1,4 +1,20 @@
-.filters{
-    @include flex(row, center, center);
-    margin-bottom: 200px;
+.section-header{
+    @include flex(row, center,center);
+    @include tablet(){
+        @include flex(column, center,center);
+    }
+    .filters{
+        @include flex(row, center, center);
+        .filter{
+            @include flex(row,center,center);
+        }
+        @include mobile(){
+            @include flex(column, center, center);
+        }
+    }
+    .search{
+        @include flex(row,center,center);
+    }
 }
+
+

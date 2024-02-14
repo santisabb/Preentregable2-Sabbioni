@@ -43,34 +43,38 @@
         </div>
     </header>
     <main class="main">
-        <article class="welcome-section">
-            <div class="welcome-title">
+        <section class="section-header">
+            <div class="filters-title">
                 <h2>BROWSE BY</h2>
             </div>
-            <div class="welcome-text">
-                <p>Checkout the popular records of the week down here</p>
+            <div class="filters">
+                <div class="filter">
+                    <label for="year">Choose a year</label>
+                    <select name="years" id="year-filter">
+                        <option value="2010s">2010s</option>
+                        <option value="2000s">2000s</option>
+                        <option value="1990s">1990s</option>
+                        <option value="1980s">1980s</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <label for="genre">Choose a genre</label>
+                    <select name="genre" id="genre-filter">
+                        <option value="rock">Rock</option>
+                        <option value="rap">Rap</option>
+                        <option value="trap">Trap</option>
+                        <option value="pop">Pop</option>
+                        <option value="indie">Indie</option>
+                    </select>
+                </div>
             </div>
-        </article>
-        <section class="filters">
-            <div class="filter">
-                <label for="year">Choose a year</label>
-                <select name="years" id="year-filter">
-                    <option value="2010s">2010s</option>
-                    <option value="2000s">2000s</option>
-                    <option value="1990s">1990s</option>
-                    <option value="1980s">1980s</option>
-                </select>
+            <div class="search">
+                <input type="text" name="search" id="search" placeholder="Search">
+                <input type="button" value="Send" id="button">
             </div>
-            <div class="filter">
-                <label for="genre">Choose a genre</label>
-                <select name="genre" id="genre-filter">
-                    <option value="rock">Rock</option>
-                    <option value="rap">Rap</option>
-                    <option value="trap">Trap</option>
-                    <option value="pop">Pop</option>
-                    <option value="indie">Indie</option>
-                </select>
-            </div>
+        </section>
+        <section>
+            <h3 class="title-h3">Popular this week 📈</h3>
         </section>
         <div class="card-container">
             <div class="card">
@@ -79,9 +83,9 @@
                 <a href="../record/after-del-after.html">Record details</a>
             </div>
             <div class="card">
-                <img src="../assets/images/nslqvapm.png" alt="bb" class="card-img">
-                <h4>Bad Bunny - nadie sabe lo que a va a pasar mañana</h4>
-                <a href="../record/nadie-sabe.html">Record details</a>
+                <img src="../assets/images/la mosca y la sopa.jpg" alt="bb" class="card-img">
+                <h4>Patricio Rey y sus Redonditos de Ricota - La mosca y la sopa</h4>
+                <a href="../record/mosca-sopa.html">Record details</a>
             </div>
             <div class="card">
                 <img src="../assets/images/tu duo favorito.jpg" alt="tdf" class="card-img">
@@ -89,9 +93,84 @@
                 <a href="../record/tu-duo-favorito.html">Record details</a>
             </div>
             <div class="card">
-                <img src="../assets/images/uvst.jpg" alt="uvst" class="card-img">
+                <img src="../assets/images/post mortem.png" alt="uvst" class="card-img">
                 <h4>Bad Bunny - Un Verano Sin Ti</h4>
-                <a href="../record/verano-sin-ti.html">Record details</a>
+                <a href="../record/post-mortem.html">Record details</a>
+            </div>
+        </div>
+        <section>
+            <h3 class="title-h3">Popular with friends 🤜🤛</h3>
+        </section>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assets/images/542.jpg" alt="ada" class="card-img">
+                <h4>C.R.O - 542</h4>
+                <a href="../record/542.html">Record details</a>
+            </div>
+            <div class="card">
+                <img src="../assets/images/especial.jpg" alt="bb" class="card-img">
+                <h4>Viejas Locas - Especial</h4>
+                <a href="../record/especial.html">Record details</a>
+            </div>
+            <div class="card">
+                <img src="../assets/images/x100pre.png" alt="tdf" class="card-img">
+                <h4>Bad Bunny - X100PRE</h4>
+                <a href="../record/x100pre.html">Record details</a>
+            </div>
+            <div class="card">
+                <img src="../assets/images/hecho a mano.jpg" alt="uvst" class="card-img">
+                <h4>YSY A - HECHO A MANO</h4>
+                <a href="../record/hecho-a-mano.html">Record details</a>
+            </div>
+        </div>
+        <section>
+            <h3 class="title-h3">Popular this month 🗓️</h3>
+        </section>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assets/images/nslqvapm.png" alt="ada" class="card-img">
+                <h4>Bad Bunny - nadie sabe lo que va a pasar mañana</h4>
+                <a href="../record/nadie-sabe.html">Record details</a>
+            </div>
+            <div class="card">
+                <img src="../assets/images/after del after.jpg" alt="bb" class="card-img">
+                <h4>YSY A - AFTER DEL AFTER</h4>
+                <a href="../record/after-del-after.html">Record details</a>
+            </div>
+            <div class="card">
+                <img src="../assets/images/ad21s.png" alt="tdf" class="card-img">
+                <h4>21 Savage - american dream</h4>
+                <a href="../record/american-dream.html">Record details</a>
+            </div>
+            <div class="card">
+                <img src="../assets/images/jackboys.png" alt="uvst" class="card-img">
+                <h4>JACKBOYS & Travis Scott - JACKBOYS</h4>
+                <a href="../record/jackboys.html">Record details</a>
+            </div>
+        </div>
+        <section>
+            <h3 class="title-h3">Popular all time 🌟</h3>
+        </section>
+        <div class="card-container">
+            <div class="card">
+                <img src="../assets/images/clics modernos.jpeg" alt="ada" class="card-img">
+                <h4>Charly Garcia - Clics Modernos</h4>
+                <a href="../record/clics-modernos.html">Record details</a>
+            </div>
+            <div class="card">
+                <img src="../assets/images/rtd-biggie.jpg" alt="bb" class="card-img">
+                <h4>The Notorious B.I.G. - Ready To Die</h4>
+                <a href="../record/nadie-sabe.html">Record details</a>
+            </div>
+            <div class="card">
+                <img src="../assets/images/more life.png" alt="tdf" class="card-img">
+                <h4>Drake - More Life</h4>
+                <a href="../record/more-life.html">Record details</a>
+            </div>
+            <div class="card">
+                <img src="../assets/images/antezana 247.jpg" alt="uvst" class="card-img">
+                <h4>YSY A - Antezana 247</h4>
+                <a href="../record/antezana.html">Record details</a>
             </div>
         </div>
     </main>
