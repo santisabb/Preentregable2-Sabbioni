@@ -1,0 +1,93 @@
+.review-container{
+    width: 80%;
+    border-bottom-style: solid;
+    @include mobile(){
+    @include flex(column, start, center);
+    border-bottom-right-radius: unset;
+    }
+    h4{
+        color: $title-color2;
+        font-family: map-get($map: $google-fonts, $key: lilita);
+    }
+    p{
+        color: rgb(229, 228, 228);
+        font-family: map-get($map: $google-fonts, $key: sans-pt);
+    }
+    .review-header{
+        @include flex(row-reverse, center,center);
+        .record-cover{
+            height: 120px;
+            width: 100px;
+            align-self: self-start;
+            @include mobile(){
+                height: 100px;
+                width: 80px;
+            } 
+        }
+        .data{
+            @include flex(column,center, start);
+            margin-left: 1em;
+            @include mobile(){
+                display: grid;
+                grid-template-areas: 
+                'record-title profile-data'
+                'user-rate profile-data';
+            }
+            .record-title{
+                @include flex(row, start, center);
+               *{
+                    margin-bottom: 0;
+                }
+                @include mobile(){
+                    @include flex(column, center, center);
+                }
+                .record-name{
+                    margin-right: 0.5rem;
+                }
+                .release-year{
+                    align-self: self-start;
+                }
+            }
+            .profile-data{
+                @include flex(row, start, center);
+                @include mobile(){
+                    @include flex(row, end, start);
+                }
+                img{
+                    border-radius: 50%;
+                    width: 10%;
+                    @include tablet(){
+                        width: 20%;
+                    }
+                    @include mobile(){
+                        width: 20%;
+                    }
+                }
+                p{
+                    text-align: center;
+                    margin-bottom: 0;
+                } 
+            }
+            .user-rate{
+                display: flex;
+                align-self: self-start;
+                .rate-logo{
+                    @include flex(row, center, center);
+                    .bi{
+                        color: green;
+                        padding: 2px;
+                    }
+                }
+            }
+        }
+    .review-text{
+        width: 70%;
+        @include tablet(){
+            width: 100%;
+            p{                
+                font-size: $mobile-font-text;
+                }
+            }
+        }
+    }
+}

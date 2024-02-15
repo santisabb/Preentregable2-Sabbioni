@@ -6,6 +6,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Eczar&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -110,11 +112,11 @@ header .nav .navbar .navbar-list li {
   padding: 1rem;
 }
 header .nav .navbar .navbar-list li a {
-  color: blue;
+  color: aquamarine;
   text-decoration: none;
 }
 header .nav .navbar .navbar-list li a:hover {
-  color: rgb(229, 228, 228);
+  color: indianred;
 }
 @media screen and (max-width: 520px) {
   header .nav .navbar .navbar-list {
@@ -162,6 +164,32 @@ footer {
   }
 }
 
+.title-h3 {
+  text-align: center;
+  text-decoration: underline;
+  color: aquamarine;
+  font-family: "Protest Strike";
+  margin-top: 2rem;
+}
+
+.popular-reviews {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+@media screen and (max-width: 520px) {
+  .popular-reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .popular-reviews p {
+    font-size: 1em;
+  }
+}
+
 .welcome-section, .welcome-text {
   display: flex;
   justify-content: center;
@@ -187,19 +215,158 @@ footer {
   }
 }
 
-.card-container {
+.review-container {
+  width: 80%;
+  border-bottom-style: solid;
+}
+@media screen and (max-width: 520px) {
+  .review-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    border-bottom-right-radius: unset;
+  }
+}
+.review-container h4 {
+  color: aquamarine;
+  font-family: "Lilita One";
+}
+.review-container p {
+  color: rgb(229, 228, 228);
+  font-family: "PT Sans Narrow";
+}
+.review-container .review-header {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.review-container .review-header .record-cover {
+  height: 120px;
+  width: 100px;
+  align-self: self-start;
+}
+@media screen and (max-width: 520px) {
+  .review-container .review-header .record-cover {
+    height: 100px;
+    width: 80px;
+  }
+}
+.review-container .review-header .data {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin-left: 1em;
+}
+@media screen and (max-width: 520px) {
+  .review-container .review-header .data {
+    display: grid;
+    grid-template-areas: "record-title profile-data" "user-rate profile-data";
+  }
+}
+.review-container .review-header .data .record-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+.review-container .review-header .data .record-title * {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 520px) {
+  .review-container .review-header .data .record-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.review-container .review-header .data .record-title .record-name {
+  margin-right: 0.5rem;
+}
+.review-container .review-header .data .record-title .release-year {
+  align-self: self-start;
+}
+.review-container .review-header .data .profile-data {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+@media screen and (max-width: 520px) {
+  .review-container .review-header .data .profile-data {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    flex-direction: row;
+  }
+}
+.review-container .review-header .data .profile-data img {
+  border-radius: 50%;
+  width: 10%;
+}
+@media screen and (max-width: 900px) {
+  .review-container .review-header .data .profile-data img {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .review-container .review-header .data .profile-data img {
+    width: 20%;
+  }
+}
+.review-container .review-header .data .profile-data p {
+  text-align: center;
+  margin-bottom: 0;
+}
+.review-container .review-header .data .user-rate {
+  display: flex;
+  align-self: self-start;
+}
+.review-container .review-header .data .user-rate .rate-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.review-container .review-header .data .user-rate .rate-logo .bi {
+  color: green;
+  padding: 2px;
+}
+.review-container .review-header .review-text {
+  width: 70%;
+}
+@media screen and (max-width: 900px) {
+  .review-container .review-header .review-text {
+    width: 100%;
+  }
+  .review-container .review-header .review-text p {
+    font-size: 1em;
+  }
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
   align-items: unset;
   flex-direction: row;
+  padding: 1rem;
+  flex-wrap: wrap;
 }
 .card-container .card {
   width: 300px;
+  height: auto;
+  background-color: rgb(34, 33, 33);
   display: flex;
   justify-content: unset;
   align-items: center;
   flex-direction: column;
-  border: none;
+  border: solid 1px black;
+  border-radius: 10%;
+  gap: 1rem;
+  margin-bottom: 10px;
   padding: 1rem;
 }
 .card-container .card .card-img {
@@ -218,6 +385,10 @@ footer {
 .card-container .card a {
   color: deeppink;
   font-size: 1.25em;
+  padding: 8px;
+  border: 1px solid rgb(35, 32, 32);
+  border-radius: 10%;
+  background-color: rgb(160, 160, 160);
   text-decoration: none;
 }
 @media screen and (max-width: 520px) {
@@ -226,7 +397,7 @@ footer {
   }
 }
 .card-container .card a:hover {
-  color: black;
+  color: rgb(229, 228, 228);
 }
 
 #button {
@@ -281,12 +452,55 @@ footer {
   }
 }
 
-.filters {
+.section-header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin-bottom: 200px;
+}
+@media screen and (max-width: 900px) {
+  .section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.section-header .filters-title h3 {
+  color: indianred;
+  font-family: "Eczar";
+  margin-bottom: 0;
+}
+.section-header .filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.section-header .filters .filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.section-header .filters .filter .year-filter, .section-header .filters .filter .genre-filter {
+  margin-left: 1rem;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 10%;
+}
+@media screen and (max-width: 520px) {
+  .section-header .filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.section-header .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .filter {
@@ -375,32 +589,139 @@ footer {
   }
 }
 
-/*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE Y LISTS*/
+.last-review {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.last-review h3 {
+  border-bottom-style: solid;
+  margin-bottom: 1rem;
+  font-family: "Bebas Neue";
+  color: indianred;
+}
+@media screen and (max-width: 520px) {
+  .last-review h3 {
+    align-self: flex-start;
+    margin-left: 42px;
+    margin-bottom: 1rem;
+  }
+}
+.last-review .review-container {
+  width: 50%;
+}
+@media screen and (max-width: 520px) {
+  .last-review .review-container .review-header .data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.last-review .review-container .review-header .data .profile-data img {
+  height: 50px;
+  width: 50px;
+}
+@media screen and (max-width: 900px) {
+  .last-review .review-container .review-header .data .profile-data img {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .last-review .review-container .review-header .data .profile-data img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.interactions-data {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: unset;
+  flex-direction: column;
+}
+.interactions-data h4 {
+  text-align: center;
+  text-decoration: underline;
+  color: aquamarine;
+  font-family: "Protest Riot";
+}
+.interactions-data .interaction {
+  color: rgb(229, 228, 228);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.interactions-data .interaction * {
+  margin-bottom: 0;
+}
+
+/*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE,LISTS E INDEX*/
 .records-cards {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+.records-cards .list-text {
+  margin-top: 50px;
+}
 .records-cards .cards {
   padding-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
-.records-cards .cards img {
+@media screen and (max-width: 900px) {
+  .records-cards .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+.records-cards .cards .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(65, 65, 65);
+  border-style: none;
+}
+.records-cards .cards .card img {
   padding: 0.5rem;
   width: 200px;
   height: 230px;
 }
 @media screen and (max-width: 900px) {
-  .records-cards .cards img {
+  .records-cards .cards .card img {
     width: 180px;
     height: 210px;
   }
 }
 @media screen and (max-width: 520px) {
-  .records-cards .cards img {
+  .records-cards .cards .card img {
     width: 140px;
     height: 170px;
   }
+}
+.records-cards .cards .card h5 {
+  color: indianred;
+  font-family: "Caprasimo";
+}
+@media screen and (max-width: 520px) {
+  .records-cards .cards .card h5 {
+    font-size: 1em;
+  }
+}
+.records-cards .cards .card h6 {
+  color: rgb(229, 228, 228);
+  font-family: "Lilita One";
 }
 .records-cards .list-text {
   font-family: "Protest Strike";
@@ -417,15 +738,19 @@ footer {
 }
 
 .list-title {
-  color: indianred;
+  color: rgb(155, 217, 238);
   font-size: 2em;
   padding: 1rem;
-  font-family: "Single Day";
+  font-family: "Architects Daughter";
 }
 @media screen and (max-width: 520px) {
   .list-title {
     font-size: 1.75em;
   }
+}
+
+.list-title {
+  text-align: center;
 }
 
 .list-container {

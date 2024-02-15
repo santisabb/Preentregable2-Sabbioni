@@ -52,3 +52,59 @@
         }
     }
 }
+.last-review{
+    margin-top: 2rem;
+    @include flex(column,center,center);
+    h3{
+        border-bottom-style: solid;
+        margin-bottom: 1rem;
+        font-family: map-get($map: $google-fonts, $key: bebas);
+        color: $title-color1;
+        @include mobile(){
+            align-self: flex-start;
+            margin-left: 42px;
+            margin-bottom: 1rem;
+        }
+    }
+    .review-container{
+        width: 50%;
+        .review-header{
+            .data{
+                @include mobile(){
+                    @include flex(column, center, center);
+                }
+                .profile-data{
+                    img{
+                        height: 50px;
+                        width: 50px;
+                        @include tablet(){
+                            height: 40px;
+                            width: 40px;
+                        }
+                        @include mobile(){
+                            height: 30px;
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.interactions-data{
+    margin-top: 2rem;
+    @include flex(column,center,unset);
+    h4{
+        text-align: center;
+        text-decoration: underline;
+        color: $title-color2;
+        font-family: map-get($map: $google-fonts, $key: protest-riot);
+    }
+    .interaction{
+        color: rgb(229, 228, 228);
+        *{
+            margin-bottom: 0;
+        }
+        @include flex(row, space-around, center);
+    }
+}

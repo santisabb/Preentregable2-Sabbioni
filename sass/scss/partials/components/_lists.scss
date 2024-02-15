@@ -1,3 +1,6 @@
+.list-title{
+    text-align: center;
+}
 .list-container{
     @include flex(column, unset, center);
     .card-container{
