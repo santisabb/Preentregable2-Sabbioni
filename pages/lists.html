@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina donde se muestran las listas mas populares que pueden
+    ser creadas por los usuarios">
+    <!-- SASS -->
+    <link rel="stylesheet" href="../sass/css/styles.css">
+    <!-- Icono de la pagina -->
+    <link rel="icon" href="../assets/images/logo-harmony1.jpeg" type="ico">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
     crossorigin="anonymous">
-    <link rel="icon" href="../assets/images/logo-harmony1.jpeg" type="ico">
-    <link rel="stylesheet" href="../sass/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS - Animate on scroll library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Lists</title>
 </head>
 <body>
     <header id="header">
         <div class="title">
             <a href="../index.html" class="title-text"><h1>HARMONY</h1></a>
-            <img src="../assets/images/logo-harmony1.jpeg" alt="harmony" class="title-img">
+            <img src="../assets/images/logo-harmony1.jpeg" alt="logotipo de la pagina con un estilo colorido y 
+            abstracto" class="title-img">
         </div>
-        <button class="open-menu" id="open-menu">
+        <button class="open-menu animate__animated animate__rollIn" id="open-menu">
             <i class="bi bi-list-ul"></i>
         </button>
         <div class="nav" id="nav">
@@ -43,28 +53,33 @@
             </nav>
         </div>
     </header>
+
     <main class="main">
         <h2 class="list-title">Collect, curate, and share. Lists are the perfect way to group records.</h2>
         <section class="records-cards">
             <h4 class="list-text">Rock Classics 🎸</h4>
             <div class="card-container">
                 <div class="card">
-                    <img src="../assets/images/stadium arcadium.png" alt="cover" class="card-img">
+                    <img src="../assets/images/stadium arcadium.png" alt="tapa de disco correspondiente
+                    a Stadium Arcadium de Red Hot Chilli Peppers" class="card-img">
                     <h5>Red Hot Chilli Peppers</h5>
                     <h6>Stadium Arcadium</h6>
                 </div>
                 <div class="card">
-                    <img src="../assets/images/paranoid.png" alt="cover" class="card-img">
+                    <img src="../assets/images/paranoid.png" alt="tapa de disco correspondiente a paranoid
+                    de black sabbath" class="card-img">
                     <h5>Black Sabbath</h5>
                     <h6>Paranoid</h6>
                 </div>
                 <div class="card">
-                    <img src="../assets/images/in utero.jpg" alt="cover" class="card-img">
+                    <img src="../assets/images/in utero.jpg" alt="tapa de disco correspondiente a in utero
+                    de Nirvana" class="card-img">
                     <h5>Nirvana</h5>
                     <h6>In Utero</h6>
                 </div>
                 <div class="card">
-                    <img src="../assets/images/clics modernos.jpeg" alt="cover" class="card-img">
+                    <img src="../assets/images/clics modernos.jpeg" alt="tapa de disco correspondiente a clics modernos
+                    de charly Garcia" class="card-img">
                     <h5>Charly Garcia</h5>
                     <h6>Clics Modernos</h6>
                 </div>
@@ -72,22 +87,26 @@
             <h4 class="list-text">Argentina in the house 🇦🇷</h4>
             <div class="card-container">
                 <div class="card">
-                    <img src="../assets/images/antezana 247.jpg" alt="cover" class="card-img">
+                    <img src="../assets/images/antezana 247.jpg" alt="tapa de disco correspondiente a antezana 247 de 
+                    ysy a" class="card-img">
                     <h5>YSY A</h5>
                     <h6>Antezana 247</h6>
                 </div>
                 <div class="card">
-                    <img src="../assets/images/tu duo favorito.jpg" alt="cover" class="card-img">
+                    <img src="../assets/images/tu duo favorito.jpg" alt="tapa de disco correspondiente a tu duo favorito 
+                    de ysy a y Bhavi" class="card-img">
                     <h5>YSY A & Bhavi</h5>
                     <h6>TU DUO FAVORITO</h6>
                 </div>
                 <div class="card">
-                    <img src="../assets/images/sintomas.jpg" alt="cover" class="card-img">
+                    <img src="../assets/images/sintomas.jpg" alt="tapa de disco correspondiente a sintomas 
+                    de ronpe 99" class="card-img">
                     <h5>Ronpe 99</h5>
                     <h6>Sintomas</h6>
                 </div>
                 <div class="card">
-                    <img src="../assets/images/oktubre.png" alt="cover" class="card-img">
+                    <img src="../assets/images/oktubre.png" alt="tapa de disco correspondiente a oktubre
+                    de patricio rey y sus redonditos de ricota" class="card-img">
                     <h5>Patricio Rey y sus redonditos de ricota</h5>
                     <h6>Oktubre</h6>
                 </div>
@@ -95,34 +114,44 @@
             <h4 class="list-text">TrapA 🎢</h4>
             <div class="card-container">
                 <div class="card">
-                    <img src="../assets/images/jackboys.png" alt="cover" class="card-img">
+                    <img src="../assets/images/jackboys.png" alt="tapa de disco correspondiente a jackboys de
+                    travis scott y jackboys" class="card-img">
                     <h5>JACKBOYS & Travis Scott</h5>
                     <h6>JACKBOYS</h6>
                 </div>
                 <div class="card">
-                    <img src="../assets/images/ad21s.png" alt="cover" class="card-img">
+                    <img src="../assets/images/ad21s.png" alt="tapa de disco correspondiente a american dream
+                    de 21 Savage" class="card-img">
                     <h5>21 Savage</h5>
                     <h6>american dream</h6>
                 </div>
                 <div class="card">
-                    <img src="../assets/images/hecho a mano.jpg" alt="cover" class="card-img">
+                    <img src="../assets/images/hecho a mano.jpg" alt="tapa de disco correspondiente a hecho a mano 
+                    de ysy a" class="card-img">
                     <h5>YSY A</h5>
                     <h6>HECHO A MANO</h6>
                 </div>
                 <div class="card">
-                    <img src="../assets/images/post mortem.png" alt="cover" class="card-img">
+                    <img src="../assets/images/post mortem.png" alt="tapa de disco correspondiente a post mortem 
+                    de Dillom" class="card-img">
                     <h5>Dillom</h5>
                     <h6>Post Mortem</h6>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <p>© Designed and built by the Harmony team ♥</p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
     crossorigin="anonymous"></script>
     <script src="../scripts/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

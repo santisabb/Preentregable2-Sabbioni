@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina del sitio donde se muestran algunas preguntas frecuentes (FAQs)
+    y una seccion donde el usuario puede contactarse con el/los desarrolladores para aportar ideas" />
+    <!-- SASS -->
+    <link rel="stylesheet" href="../sass/css/styles.css">
+    <!-- Icono de la pagina -->
+    <link rel="icon" href="../assets/images/logo-harmony1.jpeg" type="ico">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
     crossorigin="anonymous">
-    <link rel="icon" href="../assets/images/logo-harmony1.jpeg" type="ico">
-    <link rel="stylesheet" href="../sass/css/styles.css">
+    <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS - Animate on scroll library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Frequent questions</title>
 </head>
 <body>
     <header id="header">
         <div class="title">
             <a href="../index.html" class="title-text"><h1>HARMONY</h1></a>
-            <img src="../assets/images/logo-harmony1.jpeg" alt="harmony" class="title-img">
+            <img src="../assets/images/logo-harmony1.jpeg" alt="logotipo de la pagina con un estilo colorido y 
+            abstracto" class="title-img">
         </div>
-        <button class="open-menu" id="open-menu">
+        <button class="open-menu animate__animated animate__rollIn" id="open-menu">
             <i class="bi bi-list-ul"></i>
         </button>
         <div class="nav" id="nav">
@@ -42,45 +53,47 @@
             </nav>
         </div>
     </header>
+
     <main class="main">
         <div class="card-container">
             <div class="card">
-                <img src="../assets/images/question mark.png" alt="?qm" class="card-img">
+                <img src="../assets/images/question mark.png" alt="tapa de disco correspondiente a question mark
+                de xxxtentacion" class="card-img">
                 <h4>XXXTENTACION - ? (Question Mark)</h4>
                 <a href="../record/question-mark.html">Record details</a>
             </div>
         </div>
         <section class="resume">
-            <h4>SOBRE HARMONY</h4>
-            <h3>Que es Harmony?</h3>
+            <h3>SOBRE HARMONY</h3>
+            <h4>Que es Harmony?</h4>
             <p>Harmony es una pagina web donde un usuario puede dar like, played, dar rate,
                 escribir un comentario o reseña y demas interacciones con records; ya sea este
                 un single, extended play(EP) o long play(LP).
             </p>
         </section>
         <section class="membership">
-            <h4>Membresia</h4>
-            <h3>Necesito una crear una cuenta para usar este sitio?</h3>
+            <h3>Membresia</h3>
+            <h4>Necesito una crear una cuenta para usar este sitio?</h4>
             <p>No, para navegar en este sitio y ver reseñas y rating de los records no hace
                 falta crear una cuenta nueva. Para interactuar con las opciones de los records, si necesito
                 crear una cuenta de usuario nueva.
             </p>
-            <h3>Como me vuelvo miembro?</h3>
+            <h4>Como me vuelvo miembro?</h4>
             <p>Solamente ir a la opcion de crear cuenta (sing up) y listo.</p>
-            <h3>Cuesta usar el sitio web?</h3>
+            <h4>Cuesta usar el sitio web?</h4>
             <p>No. Harmony es totalmente gratis.</p>
         </section>
         <section class="use">
-            <h4>Uso general</h4>
-            <h3>Como debo usar Harmony?</h3>
+            <h3>Uso general</h3>
+            <h4>Como debo usar Harmony?</h4>
             <p>Respuesta corta: <b>como quieras.</b> La interaccion mas sencilla es marcar
             el signo de play en cada record para que quede como escuchado por el usuario.</p>
-            <h3>Puedo escuchar musica en Harmony?</h3>
+            <h4>Puedo escuchar musica en Harmony?</h4>
             <p>No. Harmony no es una plataforma de streaming.</p>
         </section>
         <article class="welcome-section">
             <div class="welcome-title">
-                <h2>Contact to Harmony</h2>
+                <h3>Contact to Harmony</h3>
             </div>
             <div class="welcome-text">
                 <p>If you have any suggestion to improve our website, you can leave us your name and the comment with your contribution, thank you very much ♥</p>
@@ -99,13 +112,15 @@
             </form>
             <div class="card-container">
                 <div class="card">
-                    <img src="../assets/images/perfect timing.jpg" alt="record-art" class="card-img">
+                    <img src="../assets/images/perfect timing.jpg" alt="tapa de disco correspondiente a perfect 
+                    timing de NAV" class="card-img">
                     <h4>NAV - Perfect Timing</h4>
                     <a href="../record/perfect-timing.html">Record details</a>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <p>© Designed and built by the Harmony team ♥</p>
     </footer>
@@ -113,5 +128,9 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
     crossorigin="anonymous"></script>
     <script src="../scripts/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
