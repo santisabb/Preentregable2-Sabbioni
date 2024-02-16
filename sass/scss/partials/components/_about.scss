@@ -1,7 +1,7 @@
 .section-form{
     @include flex(row, space-around, unset);
-    @include mobile(){
-        @include flex(column, center, center);
+    @include tablet(){
+        @include flex(column-reverse, center, center);
     }
 }
 
@@ -29,6 +29,11 @@
     }
     @include mobile(){
         font-size: $mobile-font-text;
+    }
+    p{
+        @include mobile(){
+            font-size: $mobile-font-text;
+        }
     }
 }
 

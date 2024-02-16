@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harmony</title>
+    <meta name="description" content="Pagina principal del sitio donde se muestra un texto de 
+    bienvenida, cartas de discos con un link a los detalles de cada uno, reviews de 4 discos y listas
+    de discos basadas en generos">
+    <!-- SASS -->
     <link rel="stylesheet" href="sass/css/styles.css">
+    <!-- Icono de la pagina -->
     <link rel="icon" href="assets/images/logo-harmony1.jpeg" type="ico">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS - Animate on scroll library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Harmony</title>
 </head>
 <body>
     <header id="header">
         <div class="title">
             <a href="index.html" class="title-text"><h1>HARMONY</h1></a>
-            <img src="assets/images/logo-harmony1.jpeg" alt="harmony" class="title-img">
+            <img src="assets/images/logo-harmony1.jpeg" alt="logotipo de la pagina con un estilo colorido y 
+            abstracto" class="title-img">
         </div>
-        <button class="open-menu" id="open-menu">
+        <button class="open-menu animate__animated animate__rollIn" id="open-menu">
             <i class="bi bi-list-ul"></i>
         </button>
         <div class="nav" id="nav">
@@ -40,6 +52,7 @@
             </nav>
         </div>
     </header>
+
     <main>
         <article class="welcome-section">
             <div class="welcome-title">
@@ -53,19 +66,22 @@
         <section class="title-h3">
             <h3>Trending albums this week 📈</h3>
         </section>
-        <div class="card-container">
-            <div class="card">
-                <img src="assets/images/tu duo favorito.jpg" alt="542" class="card-img">
+        <div class="card-container animate__animated animate__zoomInDown">
+            <div class="card" data-aos="flip-up">
+                <img src="assets/images/tu duo favorito.jpg" alt="tapa de disco correspondiente a tu duo favorito 
+                de ysy a y Bhavi" class="card-img">
                 <h4>TU DUO FAVORITO - YSY A & Bhavi</h4>
                 <a href="record/tu-duo-favorito.html">Record details</a>
             </div>
-            <div class="card">
-                <img src="assets/images/post mortem.png" alt="cuervos" class="card-img">
+            <div class="card" data-aos="flip-up">
+                <img src="assets/images/post mortem.png" alt="tapa de disco correspondiente a post mortem de Dillom" 
+                class="card-img">
                 <h4>POST MORTEM - Dillom</h4>
                 <a href="record/post-mortem.html">Record details</a>
             </div>
-            <div class="card">
-                <img src="assets/images/la mosca y la sopa.jpg" alt="lmyls" class="card-img">
+            <div class="card" data-aos="flip-up">
+                <img src="assets/images/la mosca y la sopa.jpg" alt="tapa de disco correspondiente a la mosca y la sopa
+                de patricio rey y sus redonditos de ricota" class="card-img">
                 <h4>La mosca y la sopa - Patricio Rey y sus redonditos de ricota</h4>
                 <a href="record/mosca-sopa.html">Record details</a>
             </div>
@@ -74,18 +90,21 @@
             <h3>Trending EPs this week 💫</h3>
         </section>
         <div class="card-container">
-            <div class="card">
-                <img src="assets/images/cuervos.jpg" alt="cover" class="card-img">
+            <div class="card" data-aos="flip-up">
+                <img src="assets/images/cuervos.jpg" alt="tapa de disco correspondiente a cuervos de C.R.O" 
+                class="card-img">
                 <h4>Cuervos - C.R.O</h4>
                 <a href="record/cuervos.html">Record details</a>
             </div>
-            <div class="card">
-                <img src="assets/images/sintomas.jpg" alt="cover" class="card-img">
+            <div class="card" data-aos="flip-up">
+                <img src="assets/images/sintomas.jpg" alt="tapa de disco correspondiente a sintomas de ronpe 99" 
+                class="card-img">
                 <h4>Sintomas - Ronpe 99</h4>
                 <a href="record/sintomas.html">Record details</a>
             </div>
-            <div class="card">
-                <img src="assets/images/frio espero.jpg" alt="cover" class="card-img">
+            <div class="card" data-aos="flip-up">
+                <img src="assets/images/frio espero.jpg" alt="tapa de disco correspondiente a frio espero de T&K" 
+                class="card-img">
                 <h4>Frio Espero - T&K</h4>
                 <a href="record/fetk.html">Record details</a>
             </div>
@@ -102,7 +121,7 @@
                             <p class="release-year">2018</p>
                         </div>
                         <div class="profile-data">
-                            <img src="assets/images/avatar1.jpg" alt="avtr">
+                            <img src="assets/images/avatar1.jpg" alt="foto de perfil del usuario que creo esta review">
                             <p>@dukissj</p>
                         </div>
                         <div class="user-rate">
@@ -115,7 +134,8 @@
                             </div>
                         </div>
                     </article>
-                    <img src="assets/images/antezana 247.jpg" alt="cover" class="record-cover">
+                    <img src="assets/images/antezana 247.jpg" alt="tapa de disco correspondiente a antezana 247 de 
+                    ysy a" class="record-cover">
                 </div>
                 <article class="review-text">
                     <p>
@@ -134,7 +154,7 @@
                             <p class="release-year">1983</p>
                         </div>
                         <div class="profile-data">
-                            <img src="assets/images/avatar1.jpg" alt="avtr">
+                            <img src="assets/images/avatar1.jpg" alt="foto de perfil del usuario que creo esta review">
                             <p>@majom76</p>
                         </div>
                         <div class="user-rate">
@@ -147,7 +167,8 @@
                             </div>
                         </div>
                     </article>
-                    <img src="assets/images/clics modernos.jpeg" alt="cover" class="record-cover">
+                    <img src="assets/images/clics modernos.jpeg" alt="tapa de disco correspondiente a clics modernos
+                    de charly Garcia" class="record-cover">
                 </div>
                 <article class="review-text">
                     <p>
@@ -164,7 +185,7 @@
                             <p class="release-year">1993</p>
                         </div>
                         <div class="profile-data">
-                            <img src="assets/images/avatar1.jpg" alt="avtr">
+                            <img src="assets/images/avatar1.jpg" alt="foto de perfil del usuario que creo esta review">
                             <p>@mcboooob</p>
                         </div>
                         <article class="user-rate">
@@ -177,7 +198,8 @@
                             </div>
                         </article>
                     </article>
-                    <img src="assets/images/black sunday.jpg" alt="cover" class="record-cover">
+                    <img src="assets/images/black sunday.jpg" alt="tapa de disco correspondiente a black Sunday
+                    de cypress hill" class="record-cover">
                 </div>
                 <article class="review-text">
                     <p>
@@ -194,7 +216,7 @@
                             <p class="release-year">2018</p>
                         </div>
                         <div class="profile-data">
-                            <img src="assets/images/avatar1.jpg" alt="avtr">
+                            <img src="assets/images/avatar1.jpg" alt="foto de perfil del usuario que creo esta review">
                             <p>@nina</p>
                         </div>
                         <article class="user-rate">
@@ -207,7 +229,8 @@
                             </div>
                         </article>
                     </article>
-                    <img src="assets/images/question mark.png" alt="cover" class="record-cover">
+                    <img src="assets/images/question mark.png" alt="tapa de disco correspondiente a question mark
+                    de xxxtentacion" class="record-cover">
                 </div>
                 <article class="review-text">
                     <p>
@@ -221,82 +244,104 @@
         </section>
         <section class="records-cards">
             <h4 class="list-text">Hip-Hop Classics</h4>
-            <div class="cards">
+            <div class="card-container" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
                 <div class="card">
-                    <img src="assets/images/chronic.jpg" alt="cover">
-                    <h5>Dr Dre</h5>
-                    <h6>The Chronic</h6>
+                    <img src="assets/images/chronic.jpg" alt="tapa de disco correspondiente a the chronic de dr dre" 
+                    class="card-img">
+                    <h5 class="artists">Dr Dre</h5>
+                    <h6 class="rec-name">The Chronic</h6>
                 </div>
                 <div class="card">
-                    <img src="assets/images/rtd-biggie.jpg" alt="cover">
+                    <img src="assets/images/rtd-biggie.jpg" alt="tapa de disco correspondiente a ready to Die
+                    de biggie" class="card-img">
                     <h5>The  Notorious B.I.G.</h5>
                     <h6>Ready to Die</h6>
                 </div>
                 <div class="card">
-                    <img src="assets/images/wutang.jpg" alt="cover">
+                    <img src="assets/images/wutang.jpg" alt="tapa de disco correspondiente a 
+                    Enter The Wu-Tang (36 Chambers) de Wu-Tang clan" class="card-img">
                     <h5>Wu-Tang Clan</h5>
                     <h6>Enter The Wu-Tang (36 Chambers)</h6>
                 </div>
                 <div class="card">
-                    <img src="assets/images/eminemshow.png" alt="cover">
+                    <img src="assets/images/eminemshow.png" alt="tapa de disco correspondiente a the eminem show
+                    de eminem" class="card-img">
                     <h5>Eminem</h5>
-                    <h6>Eminem Show</h6>
+                    <h6>The Eminem Show</h6>
                 </div>
             </div>
             <h4 class="list-text">Rock made in Argentina 🇦🇷</h4>
-            <div class="cards">
+            <div class="card-container" data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
                 <div class="card">
-                    <img src="assets/images/bbel.jpg" alt="cover">
-                    <h5>Patricio Rey y sus</h5>
-                    <h5>redonditos de ricota</h5>
+                    <img src="assets/images/bbel.jpg" alt="tapa de disco correspondiente a bang bang estas liquidado
+                    de patricio rey y sus redonditos de ricota" class="card-img">
+                    <h5>Patricio Rey y sus redonditos de ricota</h5>
                     <h6>¡Bang!¡Bang!...Estas Liquidado</h6>
                 </div>
                 <div class="card">
-                    <img src="assets/images/especial.jpg" alt="cover">
+                    <img src="assets/images/especial.jpg" alt="tapa de disco correspondiente a especial
+                    de viejas locas" class="card-img">
                     <h5>Viejas Locas</h5>
                     <h6>Especial</h6>
                 </div>
                 <div class="card">
-                    <img src="assets/images/clics modernos.jpeg" alt="cover">
+                    <img src="assets/images/clics modernos.jpeg" alt="tapa de disco correspondiente a clics modernos
+                    de charly Garcia" class="card-img">
                     <h5>Charly Garcia</h5>
                     <h6>Clics Modernos</h6>
                 </div>
                 <div class="card">
-                    <img src="assets/images/oktubre.png" alt="cover">
-                    <h5>Patricio Rey y sus </h5>
-                    <h5>redonditos de ricota</h5>
+                    <img src="assets/images/oktubre.png" alt="tapa de disco correspondiente a oktubre
+                    de patricio rey y sus redonditos de ricota" class="card-img">
+                    <h5>Patricio Rey y sus redonditos de ricota</h5>
                     <h6>Oktubre</h6>
                 </div>
             </div>
             <h4 class="list-text">2010s Rap 🥶🤯</h4>
-            <div class="cards">
+            <div class="card-container" data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0">
                 <div class="card">
-                    <img src="assets/images/perfect timing.jpg" alt="cover">
+                    <img src="assets/images/perfect timing.jpg" alt="tapa de disco correspondiente a perfect 
+                    timing de NAV" class="card-img">
                     <h5>NAV</h5>
                     <h6>Perfect Timing</h6>
                 </div>
                 <div class="card">
-                    <img src="assets/images/542.jpg" alt="cover">
+                    <img src="assets/images/542.jpg" alt="tapa de disco correspondiente a 542 de C.R.O" 
+                    class="card-img">
                     <h5>C.R.O</h5>
                     <h6>542</h6>
                 </div>
                 <div class="card">
-                    <img src="assets/images/question mark.png" alt="cover">
+                    <img src="assets/images/question mark.png" alt="tapa de disco correspondiente a question mark
+                    de xxxtentacion" class="card-img">
                     <h5>XXXTENTACION</h5>
                     <h6>? (Question Mark)</h6>
                 </div>
                 <div class="card">
-                    <img src="assets/images/more life.png" alt="cover">
+                    <img src="assets/images/more life.png" alt="tapa de disco correspondiente a more life de Drake"
+                    class="card-img">
                     <h5>Drake</h5>
                     <h6>More Life</h6>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <p>© Designed and built by the Harmony team ♥</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
