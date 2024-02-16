@@ -1,0 +1,9 @@
+.records-cards{
+    .list-text{
+        color: $title-color2;
+        font-family: map-get($map: $google-fonts, $key: protest-strike);
+        text-align: center;
+        text-decoration: underline;
+        margin-top: 1rem;
+    }
+}

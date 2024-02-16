@@ -58,6 +58,9 @@ header .title .title-text {
 }
 header .title .title-text:hover {
   color: aquamarine;
+  animation: bounce;
+  animation-delay: 0ms;
+  animation-duration: 1s;
 }
 header .title .title-text h1 {
   font-size: 3em;
@@ -144,10 +147,11 @@ header .close-menu {
   right: 1rem;
 }
 
-main, .card-container .card, footer {
-  background-color: rgb(65, 65, 65);
+main {
+  background-image: linear-gradient(to top, #191919, rgb(68, 67, 67));
+  overflow-x: hidden;
 }
-main p, .card-container .card p, footer p {
+main p {
   color: rgb(229, 228, 228);
   font-size: 1.25em;
 }
@@ -157,6 +161,9 @@ footer {
   background-color: rgb(133, 133, 133);
   padding: 1rem;
   font-family: "Diphylleia";
+}
+footer p {
+  color: white;
 }
 @media screen and (max-width: 520px) {
   footer p {
@@ -399,6 +406,22 @@ footer {
 .card-container .card a:hover {
   color: rgb(229, 228, 228);
 }
+.card-container .card h5 {
+  color: indianred;
+  font-family: "Caprasimo";
+}
+.card-container .card h6 {
+  color: aquamarine;
+  font-family: "Lilita One";
+}
+
+.records-cards .list-text {
+  color: aquamarine;
+  font-family: "Protest Strike";
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 1rem;
+}
 
 #button {
   width: 30%;
@@ -411,12 +434,12 @@ footer {
   align-items: unset;
   flex-direction: row;
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 900px) {
   .section-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
@@ -448,6 +471,11 @@ footer {
 }
 @media screen and (max-width: 520px) {
   .resume, .use, .membership {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 520px) {
+  .resume p, .use p, .membership p {
     font-size: 1em;
   }
 }
@@ -661,96 +689,11 @@ footer {
   margin-bottom: 0;
 }
 
-/*RECORDS CARDS Y CARDS SE APLICAN EN PROFILE,LISTS E INDEX*/
-.records-cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.records-cards .list-text {
-  margin-top: 50px;
-}
-.records-cards .cards {
-  padding-left: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-@media screen and (max-width: 900px) {
-  .records-cards .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-}
-.records-cards .cards .card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgb(65, 65, 65);
-  border-style: none;
-}
-.records-cards .cards .card img {
-  padding: 0.5rem;
-  width: 200px;
-  height: 230px;
-}
-@media screen and (max-width: 900px) {
-  .records-cards .cards .card img {
-    width: 180px;
-    height: 210px;
-  }
-}
-@media screen and (max-width: 520px) {
-  .records-cards .cards .card img {
-    width: 140px;
-    height: 170px;
-  }
-}
-.records-cards .cards .card h5 {
-  color: indianred;
-  font-family: "Caprasimo";
-}
-@media screen and (max-width: 520px) {
-  .records-cards .cards .card h5 {
-    font-size: 1em;
-  }
-}
-.records-cards .cards .card h6 {
-  color: rgb(229, 228, 228);
-  font-family: "Lilita One";
-}
-.records-cards .list-text {
-  font-family: "Protest Strike";
-  font-size: 2em;
-  border-bottom-width: 1px;
-  border-bottom-color: darkblue;
-  border-bottom-style: solid;
-  color: aquamarine;
-}
-@media screen and (max-width: 520px) {
-  .records-cards .list-text {
-    font-size: 1.25em;
-  }
-}
-
-.list-title {
-  color: rgb(155, 217, 238);
-  font-size: 2em;
-  padding: 1rem;
-  font-family: "Architects Daughter";
-}
-@media screen and (max-width: 520px) {
-  .list-title {
-    font-size: 1.75em;
-  }
-}
-
 .list-title {
   text-align: center;
+  color: indianred;
+  font-family: "Architects Daughter";
+  margin-bottom: 3rem;
 }
 
 .list-container {

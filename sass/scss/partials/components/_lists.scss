@@ -1,5 +1,8 @@
 .list-title{
     text-align: center;
+    color: $title-color1;
+    font-family: map-get($map: $google-fonts, $key: arquitecto);
+    margin-bottom: 3rem;
 }
 .list-container{
     @include flex(column, unset, center);

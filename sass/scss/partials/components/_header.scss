@@ -23,6 +23,9 @@ header{
             color: $title-color1;
             &:hover{
                 color: $title-color2;
+                animation: bounce;
+                animation-delay: 0ms;
+                animation-duration: 1s;
             }
             h1{
                 font-size: $main-font-titles;

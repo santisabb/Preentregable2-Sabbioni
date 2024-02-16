@@ -31,6 +31,8 @@
 @import 'partials/components/review-container';
 //Cards
 @import 'partials/components/cards';
+//Seccion donde se muestran las listas, aplicado en index, lists y profile
+@import 'partials/components/records-cards';
 //Buttons
 @import 'partials/components/buttons';
 //About
@@ -41,8 +43,6 @@
 @import 'partials/components/dropdown';
 //Profile
 @import 'partials/components/profile';
-//Records cards that  are used in the profile and lists
-@import 'partials/components/card-list';
 //Lists
 @import 'partials/components/lists';
 //Records
