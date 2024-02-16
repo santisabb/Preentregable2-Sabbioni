@@ -44,3 +44,10 @@
 .use{
     @extend .resume;
 }
+
+.welcome-section{
+    .welcome-title{
+        color: $title-color1;
+        font-family: map-get($map: $google-fonts, $key: protest-strike);
+    }
+}
