@@ -480,6 +480,11 @@ footer p {
   }
 }
 
+.welcome-section .welcome-title, .welcome-text .welcome-title {
+  color: indianred;
+  font-family: "Protest Strike";
+}
+
 .section-header {
   display: flex;
   justify-content: center;
